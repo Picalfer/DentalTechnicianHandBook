@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group android:checkableBehavior="single"> <!-- чтобы элементы проверялись по одиночке -->
+        <item android:title="@string/rem"
+            android:id="@+id/id_rem"
+            android:icon="@drawable/ic_rem"
+            />
+        <item android:title="@string/fix"
+            android:id="@+id/id_fix"
+            android:icon="@drawable/ic_fix"
+            />
+        <item android:title="@string/cer"
+            android:id="@+id/id_cer"
+            android:icon="@drawable/ic_cer"
+            />
+        <item android:title="@string/cla"
+            android:id="@+id/id_cla"
+            android:icon="@drawable/ic_cla"
+            />
+    </group>
+    <item android:title="@string/additional">
+        <menu>
+            <item android:title="@string/con"
+                android:id="@+id/id_con"
+                android:icon="@drawable/ic_con"
+                />
+            <item android:title="@string/th"
+                android:id="@+id/id_th"
+                android:icon="@drawable/ic_th"
+                />
+        </menu>
+    </item>
+
+</menu>
