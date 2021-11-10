@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">DentalTechnician HandBook</string>
+    <string name="main"><b>Главная</b></string>
     <string name="rem">Съемные</string>
     <string name="fix">Несъемные</string>
     <string name="cer">Керамика</string>
     <string name="cla">Бюгельные</string>
+    <string name="pr_imp">Протезы на имплантах</string>
+    <string name="imp">На имплантах</string>
     <string name="header">DentalTechnician HandBook</string>
     <string name="logo">logo</string>
     <string name="additional">Дополнительно</string>
@@ -13,6 +16,19 @@
     <string name="test_class_content" tools:ignore="Typos">paragraph1</string>
     <string name="test_class_content2">paragraph2</string>
     <string name="prothesis">протез</string>
+    <string name="veneers_lumineers">Виниры(люминиры)</string>
+    <string name="incl">Вкладки</string>
+    <string name="crowns">Коронки</string>
+    <string name="bridges">Мостовидные протезы</string>
+    <string name="quat">Квадротти (Quattro Ti)</string>
+    <string name="plast">Пластиночные</string>
+    <string name="neylon">Нейлоновые</string>
+    <string name="acry">Акри Фри (Acry Free)</string>
+
+    <string name="about_imp">Всё о имплантах</string>
+    <string name="about_rem">Всё о съёмных протезах</string>
+    <string name="about_cla">Всё о бюгельных протезах</string>
+    <string name="about_fix">Всё о несъёмных протезах</string>
 
     <string name="acrylic_bridge">Пластмассовый мост</string>
     <string name="cast_bridge">Литой мост</string>
@@ -39,5 +55,8 @@
     <string name="clam">На кламмерах</string>
     <string name="attach">На аттачментах</string>
     <string name="teles">На телескопических коронках</string>
+
+    <string name="part">Частичные</string>
+    <string name="whole">Полные</string>
 
 </resources>

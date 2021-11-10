@@ -50,7 +50,7 @@
                 android:layout_marginBottom="40dp"
                 android:text="TextView" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:background="@color/item_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -62,17 +62,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:clickable="true"
+                    android:focusable="true"
                     android:minHeight="48dp"
                     android:onClick="item1"
-                    android:text="TextView"
-                    android:focusable="true" />
+                    android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvContent2"
+                    android:layout_below="@+id/tvContent1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -87,6 +88,7 @@
 
                 <TextView
                     android:id="@+id/tvContent3"
+                    android:layout_below="@+id/tvContent2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -101,6 +103,7 @@
 
                 <TextView
                     android:id="@+id/tvContent4"
+                    android:layout_below="@+id/tvContent3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -115,6 +118,7 @@
 
                 <TextView
                     android:id="@+id/tvContent5"
+                    android:layout_below="@+id/tvContent4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -129,6 +133,7 @@
 
                 <TextView
                     android:id="@+id/tvContent6"
+                    android:layout_below="@+id/tvContent5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -136,11 +141,11 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:clickable="true"
+                    android:focusable="true"
                     android:minHeight="48dp"
                     android:onClick="item6"
-                    android:text="TextView"
-                    android:focusable="true" />
-            </LinearLayout>
+                    android:text="TextView" />
+            </RelativeLayout>
 
         </LinearLayout>
     </ScrollView>

@@ -4,14 +4,13 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
 
 class ContentActivity: AppCompatActivity(), View.OnClickListener {
 
-lateinit var binding: ContentItemBinding
+private lateinit var binding: ContentItemBinding
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +30,7 @@ lateinit var binding: ContentItemBinding
         binding.tvContent6.setOnClickListener(this)
 
         when (intent.getStringExtra("title")) {
-            "Мостовидные протезы" -> {
+            getString(R.string.bridges) -> {
                 binding.tvContent1.text = getString(R.string.acrylic_bridge)
                 binding.tvContent2.text = getString(R.string.cast_bridge)
                 binding.tvContent3.text = getString(R.string.met_cer_bridge)
@@ -40,7 +39,7 @@ lateinit var binding: ContentItemBinding
                 hide(1)
                 /*binding.tvContent6.visibility = GONE*/
             }
-            "Коронки" -> {
+            getString(R.string.crowns) -> {
                 binding.tvContent1.text = getString(R.string.acrylic_crown)
                 binding.tvContent2.text = getString(R.string.cast_crown)
                 binding.tvContent3.text = getString(R.string.met_cer_crown)
@@ -48,7 +47,7 @@ lateinit var binding: ContentItemBinding
                 binding.tvContent5.text = getString(R.string.cer_crown)
                 binding.tvContent6.text = getString(R.string.met_acrylic_crown)
             }
-            "Вкладки" -> {
+            getString(R.string.incl) -> {
                 binding.tvContent1.text = getString(R.string.inlay)
                 binding.tvContent2.text = getString(R.string.onlay)
                 binding.tvContent3.text = getString(R.string.overlay)
@@ -57,16 +56,24 @@ lateinit var binding: ContentItemBinding
                 /*binding.tvContent5.visibility = GONE
                 binding.tvContent6.visibility = GONE*/
             }
-            "Виниры(люминиры)" -> {
+            getString(R.string.veneers_lumineers) -> {
                 binding.tvContent1.text = getString(R.string.veneers)
                 binding.tvContent2.text = getString(R.string.lumineers)
                 hide(4)
-                /*binding.tvContent3.visibility = GONE
-                binding.tvContent4.visibility = GONE
-                binding.tvContent5.visibility = GONE
-                binding.tvContent6.visibility = GONE*/
+                // binding.tvContent4.visibility = GONE
+                // binding.tvContent5.visibility = GONE
+                // binding.tvContent6.visibility = GONE
             }
-            "Протезы на имплантах" -> {
+            getString(R.string.about_imp),
+            getString(R.string.about_cla),
+            getString(R.string.about_fix),
+            getString(R.string.about_rem),
+            getString(R.string.pr_imp),
+            getString(R.string.imp),
+            getString(R.string.quat),
+            getString(R.string.neylon),
+            getString(R.string.acry)
+            -> {
                 //тут не будет перехода на другой layout, так как нет выбора
                 //сразу будет здесь контент показываться
                 //или все-таки будет переход на layout, если будет реализован общий layout
@@ -79,7 +86,7 @@ lateinit var binding: ContentItemBinding
                 binding.tvContent5.visibility = GONE
                 binding.tvContent6.visibility = GONE*/
             }
-            "Бюгельные" -> {
+            getString(R.string.cla) -> {
                 binding.tvContent1.text = getString(R.string.clam)
                 binding.tvContent2.text = getString(R.string.attach)
                 binding.tvContent3.text = getString(R.string.teles)
@@ -88,6 +95,12 @@ lateinit var binding: ContentItemBinding
                 binding.tvContent5.visibility = GONE
                 binding.tvContent6.visibility = GONE*/
             }
+            getString(R.string.plast) -> {
+                binding.tvContent1.text = getString(R.string.part)
+                binding.tvContent2.text = getString(R.string.whole)
+                hide(4)
+            }
+            // getString(R.string.)
         }
     }
 
@@ -114,8 +127,8 @@ lateinit var binding: ContentItemBinding
         }
     }
 
-    private fun hide(n: Int) {
-        val c = arrayListOf(
+    private fun hide(number: Int) {
+        val content = arrayListOf(
             binding.tvContent1,
             binding.tvContent2,
             binding.tvContent3,
@@ -123,9 +136,9 @@ lateinit var binding: ContentItemBinding
             binding.tvContent5,
             binding.tvContent6
         )
-        val border = c.size - n
-        for (i in (c.size - 1) downTo border) {
-            c[i].visibility = GONE
+        val border = content.size - number
+        for (i in (content.size - 1) downTo border) {
+            content[i].visibility = GONE
         }
     }
 }

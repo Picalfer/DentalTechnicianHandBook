@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn = "navigation_view">
+    tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single"> <!-- чтобы элементы проверялись по одиночке -->
-        <item android:title="@string/rem"
+        <item
+            android:id="@+id/id_main"
+            android:title="@string/main" />
+        <item
             android:id="@+id/id_rem"
             android:icon="@drawable/ic_rem"
-            />
-        <item android:title="@string/fix"
+            android:title="@string/rem" />
+        <item
             android:id="@+id/id_fix"
             android:icon="@drawable/ic_fix"
-            />
-        <item android:title="@string/cer"
+            android:title="@string/fix" />
+        <!--<item
             android:id="@+id/id_cer"
             android:icon="@drawable/ic_cer"
-            />
-        <item android:title="@string/cla"
+            android:title="@string/cer" />
+        <item
             android:id="@+id/id_cla"
             android:icon="@drawable/ic_cla"
-            />
+            android:title="@string/cla" />-->
     </group>
     <item android:title="@string/additional">
         <menu>
-            <item android:title="@string/con"
+            <item
                 android:id="@+id/id_con"
                 android:icon="@drawable/ic_con"
-                />
-            <item android:title="@string/th"
+                android:title="@string/con" />
+            <item
                 android:id="@+id/id_th"
                 android:icon="@drawable/ic_th"
-                />
+                android:title="@string/th" />
         </menu>
     </item>
 

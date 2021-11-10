@@ -3,30 +3,28 @@ package com.example.dentaltechnicianhandbook
 import android.content.res.TypedArray
 import android.graphics.Color
 import android.graphics.drawable.AnimationDrawable
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dentaltechnicianhandbook.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
 
+    private lateinit var binding: ActivityMainBinding
     private var adapter: MyAdapter? = null
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val navView = findViewById<NavigationView>(R.id.nav_view)
 
@@ -43,67 +41,63 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val rcView = findViewById<RecyclerView>(R.id.rcView)
 
+        val headButton = findViewById<ImageView>(R.id.header_button)
+        headButton.setImageResource(R.drawable.header_button_home)
+
         val list = ArrayList<ListItem>()
-
-
         list.addAll(fillArrays(resources.getStringArray(R.array.prosthesis),
                                resources.getStringArray(R.array.prosthesis_content),
                                getImageId(R.array.prosthesis_image_array)))
-
-        /*list.add(ListItem(R.drawable.imp, "Всё о имплантах", "Зубной имплантат — искусственно изготовленная, чаще всего многокомпонентная конструкция, используемая для внедрения в костную ткань челюсти с последующим сращением с целью протезирования."))
-        list.add(ListItem(R.drawable.rem, "Всё о съёмных протезах", "Съемное протезирование – консервативный метод восстановления утраченных зубов. Съемный – означает, что пациент может самостоятельно снять конструкцию."))
-        list.add(ListItem(R.drawable.cla, "Всё о бюгельных протезах", "Бюгельный протез — условно-съёмный протез, который восстанавливает жевательную функцию, при этом давление распределяется между оставшимися зубами и слизистой оболочкой с подлежащей костной тканью беззубых участков альвеолярного отростка."))
-        list.add(ListItem(R.drawable.fix, "Всё о несъемных протезах", "Это понятие подразумевает восстановление дефектов зубного ряда (отсутствующих или сломанных зубов) конструкциями, которые крепятся на естественные зубы или имплантанты."))*/
 
         rcView.hasFixedSize()
         rcView.layoutManager = LinearLayoutManager(this)
 
         adapter = MyAdapter(list,this)
         rcView.adapter = adapter
-
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
+        val headButton = findViewById<ImageView>(R.id.header_button)
 
         when(item.itemId) {
-            R.id.id_cer -> {
+            R.id.id_main -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","${item.title}")
+                headButton.setImageResource(R.drawable.header_button_home)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.prosthesis),
                     resources.getStringArray(R.array.prosthesis_content),
                     getImageId(R.array.prosthesis_image_array)))
             }
             R.id.id_rem -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","${item.title}")
+                headButton.setImageResource(R.drawable.header_button_rem)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
                     resources.getStringArray(R.array.rem_prosthesis_content),
                     getImageId(R.array.rem_prosthesis_image_array)))
             }
             R.id.id_fix -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","${item.title}")
+                headButton.setImageResource(R.drawable.header_button_fix)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.fix_prosthesis),
                     resources.getStringArray(R.array.fix_prosthesis_content),
                     getImageId(R.array.fix_prosthesis_image_array)))
             }
+            /*
+            R.id.id_cer -> {
+                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.prosthesis),
+                    resources.getStringArray(R.array.prosthesis_content),
+                    getImageId(R.array.prosthesis_image_array)))
+            }
             R.id.id_cla -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","${item.title}")
-
             }
             R.id.id_con -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","${item.title}")
-
             }
             R.id.id_th -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","${item.title}")
-
-            }
-
+            }*/
         }
         val drawerLayout: DrawerLayout? = findViewById(R.id.drawerLayout)
         drawerLayout?.closeDrawer(GravityCompat.START)
@@ -129,6 +123,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         return listItemArray
     }
-
-
 }
