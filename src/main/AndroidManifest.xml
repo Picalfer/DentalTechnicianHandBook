@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DentalTechnicianHandBook">
         <activity
+            android:name=".SeparateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContentWithFragment"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,8 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContentActivity"/>
-        <activity android:name=".HeaderGradient" />
+        <activity android:name=".ContentActivity" />
     </application>
 
 </manifest>

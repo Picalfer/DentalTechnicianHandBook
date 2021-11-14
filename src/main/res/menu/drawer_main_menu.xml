@@ -15,11 +15,11 @@
             android:id="@+id/id_fix"
             android:icon="@drawable/ic_fix"
             android:title="@string/fix" />
-        <!--<item
-            android:id="@+id/id_cer"
-            android:icon="@drawable/ic_cer"
-            android:title="@string/cer" />
         <item
+            android:id="@+id/id_cast"
+            android:icon="@drawable/ic_cer"
+            android:title="@string/cast" />
+        <!-- <item
             android:id="@+id/id_cla"
             android:icon="@drawable/ic_cla"
             android:title="@string/cla" />-->

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/dataMain"
     android:layout_height="match_parent"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
@@ -68,74 +69,14 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:minHeight="48dp"
-                    android:onClick="item1"
+                    android:onClick="tv1"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tvContent1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:minHeight="48dp"
-                    android:onClick="item2"
-                    android:text="TextView"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvContent3"
-                    android:layout_below="@+id/tvContent2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:minHeight="48dp"
-                    android:onClick="item3"
-                    android:text="TextView"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvContent4"
-                    android:layout_below="@+id/tvContent3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:minHeight="48dp"
-                    android:onClick="item4"
-                    android:text="TextView"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvContent5"
-                    android:layout_below="@+id/tvContent4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:minHeight="48dp"
-                    android:onClick="item5"
-                    android:text="TextView"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvContent6"
-                    android:layout_below="@+id/tvContent5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
@@ -143,7 +84,67 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:minHeight="48dp"
-                    android:onClick="item6"
+                    android:onClick="tv2"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/tvContent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvContent2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:onClick="tv3"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/tvContent4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvContent3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:onClick="tv4"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/tvContent5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvContent4"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:onClick="tv5"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/tvContent6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvContent5"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:onClick="tv6"
                     android:text="TextView" />
             </RelativeLayout>
 

@@ -82,13 +82,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.fix_prosthesis_content),
                     getImageId(R.array.fix_prosthesis_image_array)))
             }
-            /*
-            R.id.id_cer -> {
+            R.id.id_cast -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.prosthesis),
                     resources.getStringArray(R.array.prosthesis_content),
                     getImageId(R.array.prosthesis_image_array)))
-            }
+            } //добавить массивы для заполнения вкладки литья
+            /*
             R.id.id_cla -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
             }
