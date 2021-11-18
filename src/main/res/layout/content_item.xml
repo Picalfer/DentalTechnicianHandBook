@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E7EEFF"
+            android:background="@color/blue_white"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -36,10 +36,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvContent"
@@ -48,8 +47,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="40dp"
-                android:text="TextView" />
+                android:layout_marginBottom="40dp"/>
 
             <RelativeLayout
                 android:background="@color/item_content"
@@ -57,95 +55,34 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <TextView
                     android:id="@+id/tvContent1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:minHeight="48dp"
-                    android:onClick="tv1"
-                    android:text="TextView" />
+                    style="@style/first_tv_select_type" />
 
                 <TextView
                     android:id="@+id/tvContent2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tvContent1"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:minHeight="48dp"
-                    android:onClick="tv2"
-                    android:text="TextView" />
+                    style="@style/another_tv_select_type" />
 
                 <TextView
                     android:id="@+id/tvContent3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tvContent2"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:minHeight="48dp"
-                    android:onClick="tv3"
-                    android:text="TextView" />
+                    style="@style/another_tv_select_type" />
 
                 <TextView
                     android:id="@+id/tvContent4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tvContent3"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:minHeight="48dp"
-                    android:onClick="tv4"
-                    android:text="TextView" />
+                    style="@style/another_tv_select_type" />
 
                 <TextView
                     android:id="@+id/tvContent5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tvContent4"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:minHeight="48dp"
-                    android:onClick="tv5"
-                    android:text="TextView" />
+                    style="@style/another_tv_select_type" />
 
                 <TextView
                     android:id="@+id/tvContent6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tvContent5"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:minHeight="48dp"
-                    android:onClick="tv6"
-                    android:text="TextView" />
+                    style="@style/another_tv_select_type" />
             </RelativeLayout>
 
         </LinearLayout>

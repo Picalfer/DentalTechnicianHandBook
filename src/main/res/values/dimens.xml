@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="header_height">170dp</dimen>
+    <dimen name="bigText">18sp</dimen>
+    <dimen name="normalText">16sp</dimen>
+    <dimen name="smallText">14sp</dimen>
+    <dimen name="smallestText">12sp</dimen>
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="end_margin_select_item">10dp</dimen>
+    <dimen name="start_margin">25dp</dimen>
+    <dimen name="icon_margin">14dp</dimen>
+    <dimen name="margin_top_main_image_content_page">4dp</dimen>
+    <dimen name="margin_top_first_additional_content">30dp</dimen>
 </resources>

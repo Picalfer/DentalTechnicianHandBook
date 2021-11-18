@@ -9,12 +9,8 @@ import com.example.dentaltechnicianhandbook.R
 
 class CastBridgeFragment : BaseFragment(R.layout.fragment_cast_bridge) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        return inflater.inflate(R.layout.fragment_cast_bridge, container, false)
+    override fun onResume() {
+        super.onResume()
     }
 
 }

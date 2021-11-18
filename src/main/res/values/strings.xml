@@ -30,6 +30,7 @@
     <string name="about_rem">Всё о съёмных протезах</string>
     <string name="about_cla">Всё о бюгельных протезах</string>
     <string name="about_fix">Всё о несъёмных протезах</string>
+    <string name="about_cast_on_main">Всё о литье</string>
 
     <string name="acrylic_bridge">Пластмассовый мост</string>
     <string name="cast_bridge">Литой мост</string>
@@ -59,7 +60,11 @@
 
     <string name="part">Частичные</string>
     <string name="whole">Полные</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_logo_acrylic_bridge">Акриловый мостовидный протез</string>
+    <string name="select">Select</string>
+    <string name="plus_minus">Плюсы и минусы</string>
+    <string name="indications_and_contraindications">Показания и противопоказания</string>
+    <string name="materials_and_equipment">Материалы и оборудование</string>
+    <string name="stages_of_manufacturing">Этапы изготовления</string>
 
 </resources>

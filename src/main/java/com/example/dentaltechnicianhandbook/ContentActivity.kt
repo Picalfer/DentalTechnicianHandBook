@@ -59,6 +59,7 @@ private lateinit var binding: ContentItemBinding
             getString(R.string.pr_imp),
             getString(R.string.imp),
             getString(R.string.quat),
+            getString(R.string.about_cast_on_main),
             getString(R.string.neylon),
             getString(R.string.acry),
             getString(R.string.about_fix),
