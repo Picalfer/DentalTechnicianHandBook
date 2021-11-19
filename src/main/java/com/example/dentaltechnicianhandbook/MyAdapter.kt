@@ -3,6 +3,7 @@ package com.example.dentaltechnicianhandbook
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.text.method.Touch.scrollTo
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View

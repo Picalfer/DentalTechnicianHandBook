@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dentaltechnicianhandbook.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
     private var adapter: MyAdapter? = null
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         frameAnimation.setExitFadeDuration(5000)
         frameAnimation.start()
 
-        navView.setNavigationItemSelectedListener (this)
+        navView.setNavigationItemSelectedListener(this)
 
         val rcView = findViewById<RecyclerView>(R.id.rcView)
 
@@ -46,51 +46,44 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val list = ArrayList<ListItem>()
         list.addAll(fillArrays(resources.getStringArray(R.array.prosthesis),
-                               resources.getStringArray(R.array.prosthesis_content),
-                               getImageId(R.array.prosthesis_image_array)))
+            resources.getStringArray(R.array.prosthesis_content),
+            getImageId(R.array.prosthesis_image_array)))
 
         rcView.hasFixedSize()
         rcView.layoutManager = LinearLayoutManager(this)
 
-        adapter = MyAdapter(list,this)
+        adapter = MyAdapter(list, this)
         rcView.adapter = adapter
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         val headButton = findViewById<ImageView>(R.id.header_button)
+        val rcView = findViewById<RecyclerView>(R.id.rcView)
 
-        when(item.itemId) {
+        when (item.itemId) {
             R.id.id_main -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
                 headButton.setImageResource(R.drawable.header_button_home)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.prosthesis),
                     resources.getStringArray(R.array.prosthesis_content),
                     getImageId(R.array.prosthesis_image_array)))
             }
             R.id.id_rem -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
                 headButton.setImageResource(R.drawable.header_button_rem)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
                     resources.getStringArray(R.array.rem_prosthesis_content),
                     getImageId(R.array.rem_prosthesis_image_array)))
             }
             R.id.id_fix -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
                 headButton.setImageResource(R.drawable.header_button_fix)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.fix_prosthesis),
                     resources.getStringArray(R.array.fix_prosthesis_content),
                     getImageId(R.array.fix_prosthesis_image_array)))
             }
-            /*R.id.id_cast -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.prosthesis),
-                    resources.getStringArray(R.array.prosthesis_content),
-                    getImageId(R.array.prosthesis_image_array)))
-            } //добавить массивы для заполнения вкладки литья
-            R.id.id_cla -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-            }
+            /*
             R.id.id_con -> {
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
             }
@@ -98,6 +91,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
             }*/
         }
+        rcView.smoothScrollToPosition(0)
         val drawerLayout: DrawerLayout? = findViewById(R.id.drawerLayout)
         drawerLayout?.closeDrawer(GravityCompat.START)
         return true
@@ -108,16 +102,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val count = tArray.length()
         val ids = IntArray(count)
         for (i in ids.indices) {
-            ids[i] = tArray.getResourceId(i,0)
+            ids[i] = tArray.getResourceId(i, 0)
         }
         tArray.recycle()
         return ids
     }
 
-    private fun fillArrays(titleArray: Array<String>, contentArray: Array<String>, imageArray: IntArray): List<ListItem> {
+    private fun fillArrays(
+        titleArray: Array<String>,
+        contentArray: Array<String>,
+        imageArray: IntArray,
+    ): List<ListItem> {
         val listItemArray = ArrayList<ListItem>()
         for (n in titleArray.indices) {
-            val listItem = ListItem(imageArray[n],titleArray[n],contentArray[n])
+            val listItem = ListItem(imageArray[n], titleArray[n], contentArray[n])
             listItemArray.add(listItem)
         }
         return listItemArray

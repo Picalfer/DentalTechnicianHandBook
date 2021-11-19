@@ -1,14 +1,12 @@
 package com.example.dentaltechnicianhandbook
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.dentaltechnicianhandbook.databinding.ActivitySeparateBinding
-import com.example.dentaltechnicianhandbook.fragments.AcrylicBridgeFragment
-import com.example.dentaltechnicianhandbook.fragments.CastBridgeFragment
 
 class SeparateActivity : AppCompatActivity() {
 
@@ -20,21 +18,36 @@ class SeparateActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         when(intent.getStringExtra("infoTest")) {
-            "Пластмассовый мост" -> {
-                supportFragmentManager.beginTransaction()
+            getString(R.string.acrylic_bridge) -> {
+                /*supportFragmentManager.beginTransaction()
                     .addToBackStack(null)
-                    .replace(R.id.dataContainer, AcrylicBridgeFragment()).commit()
+                    .replace(R.id.dataContainer, AcrylicBridgeFragment()).commit()*/
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.acrylic_bridge)
+                binding.contentLogoText.text = getString(R.string.content_logo_acrylic_bridge)
             }
-            "Литой мост" -> {
-                supportFragmentManager.beginTransaction()
+            getString(R.string.cast_bridge) -> {
+                /*supportFragmentManager.beginTransaction()
                     .addToBackStack(null)
-                    .replace(R.id.dataContainer, CastBridgeFragment()).commit()
+                    .replace(R.id.dataContainer, CastBridgeFragment()).commit()*/
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.cast_bridge)
+                binding.contentLogoText.text = getString(R.string.cast_bridge)
+            }
+            getString(R.string.met_cer_bridge) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.met_cer_bridge)
+                binding.contentLogoText.text = getString(R.string.met_cer_bridge)
+            }
+            getString(R.string.cer_bridge) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.cer_bridge)
+                binding.contentLogoText.text = getString(R.string.cer_bridge)
+            }
+            getString(R.string.zir_bridge) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.zir_bridge)
+                binding.contentLogoText.text = getString(R.string.zir_bridge)
             }
         }
     }
 
     fun additionalContOne(view: View) {
-        // сделать тут вэн чтобы эта функция  работала в люой страничке при вызове
         val contentTextAdd1 = findViewById<ConstraintLayout>(R.id.content_text_add_1)
         if (contentTextAdd1.visibility == GONE) contentTextAdd1.visibility = VISIBLE
         else contentTextAdd1.visibility = GONE

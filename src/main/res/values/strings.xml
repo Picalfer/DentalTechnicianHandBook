@@ -46,9 +46,13 @@
     <string name="met_acrylic_crown">Металлопластмассовая коронка</string>
 
     <string name="inlay">InLay (Тело вкладки не выходит за пределы бугров зуба)</string>
+    <string name="inlayShort">InLay</string>
     <string name="onlay">OnLay (Тело вкладки полностью перекрывает один или более бугров зуба)</string>
+    <string name="onlayShort">OnLay</string>
     <string name="overlay">OverLay (тело вкладки охватывает 4 из 5 стенок коронки зуба))</string>
+    <string name="overlayShort">OverLay</string>
     <string name="pinlay">PinLay (вкладка имеет дополнительный элемент фиксации — штифт (пин))</string>
+    <string name="pinlayShort">PinLay</string>
 
     <string name="veneers">Виниры</string>
     <string name="lumineers">Люминиры</string>

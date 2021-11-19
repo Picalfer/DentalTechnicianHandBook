@@ -22,8 +22,4 @@ open class BaseFragment(val layout: Int) : Fragment() {
     override fun onResume() {
         super.onResume()
     }
-
-    fun additionalContOne(v: View) {
-
-    }
 }

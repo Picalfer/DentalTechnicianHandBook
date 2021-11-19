@@ -1,18 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/fragmentAcrylicFragment"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/blue_white"
+tools:context=".fragments.AcrylicBridgeFragment">
+
+<ImageView
+    android:id="@+id/contentImageAcrylicBridge"
+    android:src="@drawable/acrylic_bridge"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.454"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="ImageContrastCheck"
+    android:contentDescription="@string/content_logo_acrylic_bridge"
+    style="@style/main_image_content_page" />
+
+<TextView
+    android:id="@+id/contentLogoText"
+    app:layout_constraintTop_toBottomOf="@+id/contentImageAcrylicBridge"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="@string/content_logo_acrylic_bridge"
+    style="@style/logo_text"/>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/additional_content1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SeparateActivity">
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/contentLogoText"
+    android:layout_marginTop="@dimen/vertical_margin">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/dataContainer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/button_to_open_content1"
+        style="@style/item_additional_content"
+        android:layout_marginTop="@dimen/margin_top_first_additional_content"
+        android:background="@color/pink_skin"
+        android:onClick="additionalContOne"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_select1"
+            style="@style/icon_of_item_additional_content"
+            android:contentDescription="@string/select"
+            android:src="@drawable/icon_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_button_first1"
+            style="@style/text_of_item_additional_content"
+            android:text="@string/plus_minus"
+            app:layout_constraintStart_toEndOf="@+id/icon_select1"
+            app:layout_constraintTop_toTopOf="@+id/icon_select1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_text_add_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_open_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/end_margin_select_item"
+        android:background="@color/text_pink_add_content_background"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/app_name"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/additional_content2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/additional_content1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_to_open_content2"
+        style="@style/item_additional_content"
+        android:background="@color/gold"
+        android:onClick="additionalContTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_select2"
+            style="@style/icon_of_item_additional_content"
+            android:contentDescription="@string/select"
+            android:src="@drawable/icon_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_button_first2"
+            style="@style/text_of_item_additional_content"
+            android:text="@string/indications_and_contraindications"
+            app:layout_constraintStart_toEndOf="@+id/icon_select2"
+            app:layout_constraintTop_toTopOf="@+id/icon_select2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_text_add_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_open_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/end_margin_select_item"
+        android:background="@color/text_gold_add_content_background"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/app_name"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/additional_content3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/additional_content2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_to_open_content3"
+        style="@style/item_additional_content"
+        android:background="@color/green_white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="additionalContThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_select3"
+            style="@style/icon_of_item_additional_content"
+            android:contentDescription="@string/select"
+            android:src="@drawable/icon_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_button_first3"
+            style="@style/text_of_item_additional_content"
+            android:text="@string/materials_and_equipment"
+            app:layout_constraintStart_toEndOf="@+id/icon_select3"
+            app:layout_constraintTop_toTopOf="@+id/icon_select3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_text_add_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_open_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/end_margin_select_item"
+        android:background="@color/text_green_add_content_background"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/app_name"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/additional_content4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/additional_content3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_to_open_content4"
+
+        style="@style/item_additional_content"
+        android:background="@color/dark_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="additionalContFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_select4"
+            style="@style/icon_of_item_additional_content"
+            android:contentDescription="@string/select"
+            android:src="@drawable/icon_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_button_first4"
+            style="@style/text_of_item_additional_content"
+            android:text="@string/stages_of_manufacturing"
+            app:layout_constraintStart_toEndOf="@+id/icon_select4"
+            app:layout_constraintTop_toTopOf="@+id/icon_select4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_text_add_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_open_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/end_margin_select_item"
+        android:background="@color/text_blue_add_content_background"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/app_name"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
