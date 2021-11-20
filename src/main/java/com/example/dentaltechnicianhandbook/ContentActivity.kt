@@ -29,8 +29,27 @@ private lateinit var binding: ContentItemBinding
         binding.tvContent4.setOnClickListener(this)
         binding.tvContent5.setOnClickListener(this)
         binding.tvContent6.setOnClickListener(this)
+        binding.tvContent6.setOnClickListener(this)
 
         when (intent.getStringExtra("title")) {
+            /* Главная */
+            getString(R.string.imp) -> {
+            }
+            getString(R.string.cad_cam) -> {
+            }
+            getString(R.string.cer_main) -> {
+            }
+            getString(R.string.rem_full) -> {
+            }
+            getString(R.string.rem_part) -> {
+            }
+            getString(R.string.fix) -> {
+            }
+            getString(R.string.cast_main) -> {
+            }
+            getString(R.string.material) -> {
+            }
+            /* Полные съёмные */
             getString(R.string.bridges) -> {
                 binding.tvContent1.text = getString(R.string.acrylic_bridge)
                 binding.tvContent2.text = getString(R.string.cast_bridge)
@@ -59,7 +78,6 @@ private lateinit var binding: ContentItemBinding
             getString(R.string.pr_imp),
             getString(R.string.about_cast_on_main),
             getString(R.string.quat),
-            getString(R.string.imp),
             getString(R.string.neylon),
             getString(R.string.acry),
             getString(R.string.about_fix),
@@ -223,7 +241,7 @@ private lateinit var binding: ContentItemBinding
                             .makeText(this, getString(R.string.met_cer_bridge),
                                 Toast.LENGTH_SHORT)
                             .show()
-                        i.putExtra("infoTest", getString(R.string.met_cer_crown))
+                        i.putExtra("infoTest", getString(R.string.met_acrylic_crown))
                         startActivity(i)
             }
         }

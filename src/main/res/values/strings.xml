@@ -1,12 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">DentalTechnician HandBook</string>
-    <string name="main"><b>Главная</b></string>
-    <string name="rem">Съемные</string>
-    <string name="fix">Несъемные</string>
+
+    <!-- Элементы меню -->
+    <string name="main_menu"><b>Главная</b></string>
+    <string name="rem_full_menu">Полные съёмные</string>
+    <string name="rem_part_menu">Частичные съёмные</string>
+    <string name="fix_menu">Несъёмные</string>
+
+    <!-- Главная -->
+    <string name="imp">Об имплантах</string>
+    <string name="cad_cam">О Cad-Cam</string>
+    <string name="cer_main">О керамических протезах</string>
+    <string name="rem_full">О полных съёмных протезах</string>
+    <string name="rem_part">О частично съёмных протезах</string>
+    <string name="fix">О несъёмных протезах</string>
+    <string name="cast_main">О литье</string>
+    <string name="material">Материалы и оборудование</string>
+
+    <!-- Материалы(еще не применено нигде) -->
+    <string name="impression_mat">Оттискные материалы</string>
+    <string name="gypsum_mat">Гипсы</string>
+    <string name="wax_mat">Воска</string>
+    <string name="whitewash_mat">Отбелы</string>
+    <string name="acrylic_mat">Пластмассы</string>
+    <string name="met_mat">Металлы</string>
+
     <string name="cer">Керамика</string>
     <string name="cla">Бюгельные</string>
     <string name="pr_imp">Протезы на имплантах</string>
-    <string name="imp">На имплантах</string>
     <string name="header">DentalTechnician HandBook</string>
     <string name="logo">logo</string>
     <string name="additional">Дополнительно</string>
@@ -70,5 +91,6 @@
     <string name="indications_and_contraindications">Показания и противопоказания</string>
     <string name="materials_and_equipment">Материалы и оборудование</string>
     <string name="stages_of_manufacturing">Этапы изготовления</string>
+    <string name="subject">Тема направления</string>
 
 </resources>

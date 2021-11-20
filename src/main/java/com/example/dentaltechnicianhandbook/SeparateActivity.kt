@@ -44,6 +44,30 @@ class SeparateActivity : AppCompatActivity() {
                 binding.contentImageAcrylicBridge.setImageResource(R.drawable.zir_bridge)
                 binding.contentLogoText.text = getString(R.string.zir_bridge)
             }
+            getString(R.string.cast_crown) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.cast_crown)
+                binding.contentLogoText.text = getString(R.string.cast_crown)
+            }
+            getString(R.string.acrylic_crown) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.acrylic_crown)
+                binding.contentLogoText.text = getString(R.string.acrylic_crown)
+            }
+            getString(R.string.met_cer_crown) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.met_cer_crown)
+                binding.contentLogoText.text = getString(R.string.met_cer_crown)
+            }
+            getString(R.string.zir_crown) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.zir_crown)
+                binding.contentLogoText.text = getString(R.string.zir_crown)
+            }
+            getString(R.string.cer_crown) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.cer_crown)
+                binding.contentLogoText.text = getString(R.string.cer_crown)
+            }
+            getString(R.string.met_acrylic_crown) -> {
+                binding.contentImageAcrylicBridge.setImageResource(R.drawable.met_acrylic_crown)
+                binding.contentLogoText.text = getString(R.string.met_acrylic_crown)
+            }
         }
     }
 

@@ -69,12 +69,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.prosthesis_content),
                     getImageId(R.array.prosthesis_image_array)))
             }
-            R.id.id_rem -> {
+            R.id.id_rem_full -> {
                 Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
                 headButton.setImageResource(R.drawable.header_button_rem)
                 adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
                     resources.getStringArray(R.array.rem_prosthesis_content),
                     getImageId(R.array.rem_prosthesis_image_array)))
+            }
+                R.id.id_rem_part -> {
+                    Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
+                    headButton.setImageResource(R.drawable.header_button_rem)
+                    adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
+                        resources.getStringArray(R.array.rem_prosthesis_content),
+                        getImageId(R.array.rem_prosthesis_image_array)))
             }
             R.id.id_fix -> {
                 Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()

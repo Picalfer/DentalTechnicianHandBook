@@ -6,15 +6,20 @@
     <group android:checkableBehavior="single"> <!-- чтобы элементы проверялись по одиночке -->
         <item
             android:id="@+id/id_main"
-            android:title="@string/main" />
+            android:icon="@drawable/ic_theory"
+            android:title="@string/main_menu" />
         <item
-            android:id="@+id/id_rem"
+            android:id="@+id/id_rem_full"
             android:icon="@drawable/ic_rem"
-            android:title="@string/rem" />
+            android:title="@string/rem_full_menu" />
+        <item
+            android:id="@+id/id_rem_part"
+            android:icon="@drawable/ic_part_rem"
+            android:title="@string/rem_part" />
         <item
             android:id="@+id/id_fix"
-            android:icon="@drawable/ic_fix"
-            android:title="@string/fix" />
+            android:icon="@drawable/acrylic_crown"
+            android:title="@string/fix_menu" />
         <!-- <item
             android:id="@+id/id_cast"
             android:icon="@drawable/ic_cer"
