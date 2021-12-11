@@ -79,10 +79,7 @@ private lateinit var binding: ContentItemBinding
             getString(R.string.about_cast_on_main),
             getString(R.string.quat),
             getString(R.string.neylon),
-            getString(R.string.acry),
-            getString(R.string.about_fix),
-            getString(R.string.about_rem),
-            getString(R.string.about_cla) -> {
+            getString(R.string.acry), -> {
                 //тут не будет перехода на другой layout, так как нет выбора
                 //сразу будет здесь контент показываться
                 //или все-таки будет переход на layout, если будет реализован общий layout
