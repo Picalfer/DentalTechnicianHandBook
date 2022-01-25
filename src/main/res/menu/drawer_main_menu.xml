@@ -20,14 +20,6 @@
             android:id="@+id/id_fix"
             android:icon="@drawable/acrylic_crown"
             android:title="@string/fix_menu" />
-        <!-- <item
-            android:id="@+id/id_cast"
-            android:icon="@drawable/ic_cer"
-            android:title="@string/cast" />
-        <item
-            android:id="@+id/id_cla"
-            android:icon="@drawable/ic_cla"
-            android:title="@string/cla" />-->
     </group>
     <item android:title="@string/additional">
         <menu>

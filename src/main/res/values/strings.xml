@@ -101,5 +101,7 @@
     <string name="materials_and_equipment">Материалы и оборудование</string>
     <string name="stages_of_manufacturing">Этапы изготовления</string>
     <string name="subject">Тема направления</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

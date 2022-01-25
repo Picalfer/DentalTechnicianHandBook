@@ -7,6 +7,7 @@ import android.view.View
 import android.view.View.GONE
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dentaltechnicianhandbook.content.info1images
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
 
 class ContentActivity: AppCompatActivity(), View.OnClickListener {
@@ -34,6 +35,8 @@ private lateinit var binding: ContentItemBinding
         when (intent.getStringExtra("title")) {
             /* Главная */
             getString(R.string.imp) -> {
+                hide(6)
+                supportFragmentManager.beginTransaction().replace(R.id.information, info1images.newInstance()).commit()
             }
             getString(R.string.cad_cam) -> {
             }

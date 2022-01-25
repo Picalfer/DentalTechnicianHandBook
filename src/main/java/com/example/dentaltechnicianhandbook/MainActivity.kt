@@ -1,5 +1,6 @@
 package com.example.dentaltechnicianhandbook
 
+import android.content.Intent
 import android.content.res.TypedArray
 import android.graphics.Color
 import android.graphics.drawable.AnimationDrawable
@@ -76,12 +77,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.rem_prosthesis_content),
                     getImageId(R.array.rem_prosthesis_image_array)))
             }
-                R.id.id_rem_part -> {
-                    Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
-                    headButton.setImageResource(R.drawable.header_button_rem)
-                    adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
-                        resources.getStringArray(R.array.rem_prosthesis_content),
-                        getImageId(R.array.rem_prosthesis_image_array)))
+            R.id.id_rem_part -> {
+                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
+                headButton.setImageResource(R.drawable.header_button_rem)
+                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
+                    resources.getStringArray(R.array.rem_prosthesis_content),
+                    getImageId(R.array.rem_prosthesis_image_array)))
             }
             R.id.id_fix -> {
                 Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
@@ -90,13 +91,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.fix_prosthesis_content),
                     getImageId(R.array.fix_prosthesis_image_array)))
             }
-            /*
             R.id.id_con -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
+                val i = Intent(this, ContactsActivity::class.java)
+                startActivity(i)
             }
-            R.id.id_th -> {
-                Toast.makeText(this,"${item.title}",Toast.LENGTH_SHORT).show()
-            }*/
         }
         rcView.smoothScrollToPosition(0)
         val drawerLayout: DrawerLayout? = findViewById(R.id.drawerLayout)

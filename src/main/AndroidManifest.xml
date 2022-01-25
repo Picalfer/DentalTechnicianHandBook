@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DentalTechnicianHandBook">
         <activity
+            android:name=".ContactsActivity"
+            android:exported="false" />
+        <activity
             android:name=".SeparateActivity"
             android:exported="false" />
         <activity
