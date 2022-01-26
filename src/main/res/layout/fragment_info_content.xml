@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".content.InfoContent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/item_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bot_margin_tv_content">
+
+        <ImageView
+            android:id="@+id/testIm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/testTv"
+            style="@style/tv_content" />
+
+        <TextView
+            android:text="@string/cad_cam2"
+            style="@style/tv_content" />
+
+        <TextView
+            style="@style/tv_content"
+            android:text="@string/cad_cam3" />
+
+        <TextView
+            android:text="@string/cad_cam4"
+            style="@style/tv_content" />
+
+    </LinearLayout>
+
+</FrameLayout>

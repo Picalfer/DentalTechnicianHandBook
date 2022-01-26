@@ -11,4 +11,7 @@
     <dimen name="icon_margin">14dp</dimen>
     <dimen name="margin_top_main_image_content_page">4dp</dimen>
     <dimen name="margin_top_first_additional_content">30dp</dimen>
+    <dimen name="side_margin_tv_content">20dp</dimen>
+    <dimen name="top_margin_tv_content">15dp</dimen>
+    <dimen name="bot_margin_tv_content">5dp</dimen>
 </resources>

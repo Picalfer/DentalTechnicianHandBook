@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
+
     <!-- после нажатия с recycler view на какой-то элемент,
         разновидности протеза выпадают если есть -->
 
@@ -44,10 +45,10 @@
                 android:id="@+id/tvContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="@dimen/side_margin_tv_content"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="40dp" />
+                android:layout_marginEnd="@dimen/side_margin_tv_content"
+                android:layout_marginBottom="25dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

@@ -6,39 +6,45 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.dentaltechnicianhandbook.content.info1images
+import com.example.dentaltechnicianhandbook.content.InfoContent
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
 
 class ContentActivity: AppCompatActivity(), View.OnClickListener {
 
-private lateinit var binding: ContentItemBinding
+    private lateinit var b: ContentItemBinding
+    private val dataModel: DataModel by viewModels()
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ContentItemBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        b = ContentItemBinding.inflate(layoutInflater)
+        setContentView(b.root)
 
-        binding.tvTitleContent2.text = intent.getStringExtra("title")
-        binding.tvContent.text = intent.getStringExtra("content")
-        binding.imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
+        b.tvTitleContent2.text = intent.getStringExtra("title")
+        b.tvContent.text = intent.getStringExtra("content")
+        b.imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
 
-        binding.tvContent1.setOnClickListener(this)
-        binding.tvContent2.setOnClickListener(this)
-        binding.tvContent3.setOnClickListener(this)
-        binding.tvContent4.setOnClickListener(this)
-        binding.tvContent5.setOnClickListener(this)
-        binding.tvContent6.setOnClickListener(this)
-        binding.tvContent6.setOnClickListener(this)
+        b.tvContent1.setOnClickListener(this)
+        b.tvContent2.setOnClickListener(this)
+        b.tvContent3.setOnClickListener(this)
+        b.tvContent4.setOnClickListener(this)
+        b.tvContent5.setOnClickListener(this)
+        b.tvContent6.setOnClickListener(this)
+        b.tvContent6.setOnClickListener(this)
 
         when (intent.getStringExtra("title")) {
             /* Главная */
             getString(R.string.imp) -> {
                 hide(6)
-                supportFragmentManager.beginTransaction().replace(R.id.information, info1images.newInstance()).commit()
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.imp)
             }
             getString(R.string.cad_cam) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.cad_cam)
             }
             getString(R.string.cer_main) -> {
             }
@@ -54,26 +60,26 @@ private lateinit var binding: ContentItemBinding
             }
             /* Полные съёмные */
             getString(R.string.bridges) -> {
-                binding.tvContent1.text = getString(R.string.acrylic_bridge)
-                binding.tvContent2.text = getString(R.string.cast_bridge)
-                binding.tvContent3.text = getString(R.string.met_cer_bridge)
-                binding.tvContent4.text = getString(R.string.zir_bridge)
-                binding.tvContent5.text = getString(R.string.cer_bridge)
+                b.tvContent1.text = getString(R.string.acrylic_bridge)
+                b.tvContent2.text = getString(R.string.cast_bridge)
+                b.tvContent3.text = getString(R.string.met_cer_bridge)
+                b.tvContent4.text = getString(R.string.zir_bridge)
+                b.tvContent5.text = getString(R.string.cer_bridge)
                 hide(1)
             }
             getString(R.string.crowns) -> {
-                binding.tvContent1.text = getString(R.string.acrylic_crown)
-                binding.tvContent2.text = getString(R.string.cast_crown)
-                binding.tvContent3.text = getString(R.string.met_cer_crown)
-                binding.tvContent4.text = getString(R.string.zir_crown)
-                binding.tvContent5.text = getString(R.string.cer_crown)
-                binding.tvContent6.text = getString(R.string.met_acrylic_crown)
+                b.tvContent1.text = getString(R.string.acrylic_crown)
+                b.tvContent2.text = getString(R.string.cast_crown)
+                b.tvContent3.text = getString(R.string.met_cer_crown)
+                b.tvContent4.text = getString(R.string.zir_crown)
+                b.tvContent5.text = getString(R.string.cer_crown)
+                b.tvContent6.text = getString(R.string.met_acrylic_crown)
             }
             getString(R.string.incl) -> {
-                binding.tvContent1.text = getString(R.string.inlay)
-                binding.tvContent2.text = getString(R.string.onlay)
-                binding.tvContent3.text = getString(R.string.overlay)
-                binding.tvContent4.text = getString(R.string.pinlay)
+                b.tvContent1.text = getString(R.string.inlay)
+                b.tvContent2.text = getString(R.string.onlay)
+                b.tvContent3.text = getString(R.string.overlay)
+                b.tvContent4.text = getString(R.string.pinlay)
                 hide(2)
             }
             getString(R.string.veneers_lumineers),
@@ -90,17 +96,21 @@ private lateinit var binding: ContentItemBinding
                 hide(6)
             }
             getString(R.string.cla) -> {
-                binding.tvContent1.text = getString(R.string.clam)
-                binding.tvContent2.text = getString(R.string.attach)
-                binding.tvContent3.text = getString(R.string.teles)
+                b.tvContent1.text = getString(R.string.clam)
+                b.tvContent2.text = getString(R.string.attach)
+                b.tvContent3.text = getString(R.string.teles)
                 hide(3)
             }
             getString(R.string.plast) -> {
-                binding.tvContent1.text = getString(R.string.part)
-                binding.tvContent2.text = getString(R.string.whole)
+                b.tvContent1.text = getString(R.string.part)
+                b.tvContent2.text = getString(R.string.whole)
                 hide(4)
             }
         }
+    }
+
+    private fun setContentOn(id: Int) {
+        supportFragmentManager.beginTransaction().replace(id, InfoContent.newInstance()).commit()
     }
 
     override fun onClick(v: View?) {
@@ -247,14 +257,14 @@ private lateinit var binding: ContentItemBinding
         }
     }
 
-    private fun hide(number: Int) {
+    private fun hide(number: Int) = with(b) {
         val content = arrayListOf(
-            binding.tvContent1,
-            binding.tvContent2,
-            binding.tvContent3,
-            binding.tvContent4,
-            binding.tvContent5,
-            binding.tvContent6
+            tvContent1,
+            tvContent2,
+            tvContent3,
+            tvContent4,
+            tvContent5,
+            tvContent6
         )
         val border = content.size - number
         for (i in (content.size - 1) downTo border) content[i].visibility = GONE

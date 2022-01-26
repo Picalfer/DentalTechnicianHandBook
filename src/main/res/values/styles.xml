@@ -63,4 +63,13 @@
         <item name="android:textSize">@dimen/normalText</item>
         <item name="android:layout_marginStart">@dimen/start_margin</item>
     </style>
+
+    <style name="tv_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/side_margin_tv_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin_tv_content</item>
+        <item name="android:layout_marginBottom">@dimen/bot_margin_tv_content</item>
+        <item name="android:layout_marginTop">@dimen/top_margin_tv_content</item>
+    </style>
 </resources>
