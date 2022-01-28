@@ -47,16 +47,34 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 dataModel.kind.value = getString(R.string.cad_cam)
             }
             getString(R.string.cer_main) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.cer_main)
             }
             getString(R.string.rem_full) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.rem_full)
             }
             getString(R.string.rem_part) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.rem_part)
             }
             getString(R.string.fix) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.fix)
             }
             getString(R.string.cast_main) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.cast_main)
             }
             getString(R.string.material) -> {
+                hide(6)
+                setContentOn(R.id.information)
+                dataModel.kind.value = getString(R.string.material)
             }
             /* Полные съёмные */
             getString(R.string.bridges) -> {

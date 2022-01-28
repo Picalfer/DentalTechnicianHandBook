@@ -72,4 +72,11 @@
         <item name="android:layout_marginBottom">@dimen/bot_margin_tv_content</item>
         <item name="android:layout_marginTop">@dimen/top_margin_tv_content</item>
     </style>
+
+    <style name="im_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/side_margin_tv_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin_tv_content</item>
+        <item name="android:layout_height">270dp</item>
+    </style>
 </resources>
