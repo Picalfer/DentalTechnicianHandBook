@@ -85,6 +85,7 @@
     <string name="pinlayShort">PinLay</string>
 
     <string name="veneers">Виниры</string>
+    <string name="veneers_classic">Виниры классические</string>
     <string name="lumineers">Люминиры</string>
     <string name="swipe">swipe</string>
 
@@ -276,4 +277,5 @@
         \n\n •	обладать постоянным химическим составом, имеющим антикоррозионные свойства;
         \n\n •	быть пластичными во время работы, но максимально твердыми после ее завершения
     </string>
+    <string name="example">Пример изделия</string>
 </resources>

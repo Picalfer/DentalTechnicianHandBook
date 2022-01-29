@@ -1,6 +1,5 @@
 package com.example.dentaltechnicianhandbook
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -16,7 +15,6 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
     private lateinit var b: ContentItemBinding
     private val dataModel: DataModel by viewModels()
 
-    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ContentItemBinding.inflate(layoutInflater)
@@ -36,47 +34,19 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
 
         when (intent.getStringExtra("title")) {
             /* Главная */
-            getString(R.string.imp) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.imp)
+            getString(R.string.imp) -> setContentOn(R.id.information, R.string.imp)
+            getString(R.string.cad_cam) -> setContentOn(R.id.information, R.string.cad_cam)
+            getString(R.string.cer_main) -> setContentOn(R.id.information, R.string.cer_main)
+            getString(R.string.rem_full) -> setContentOn(R.id.information, R.string.rem_full)
+            getString(R.string.rem_part) -> setContentOn(R.id.information, R.string.rem_part)
+            getString(R.string.fix) -> setContentOn(R.id.information, R.string.fix)
+            getString(R.string.cast_main) -> setContentOn(R.id.information, R.string.cast_main)
+            getString(R.string.material) -> setContentOn(R.id.information, R.string.material)
+            /* Несъёмные */
+            getString(R.string.veneers_lumineers) -> {
+                b.tvContent1.text = getString(R.string.veneers_classic)
+                hide(5)
             }
-            getString(R.string.cad_cam) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.cad_cam)
-            }
-            getString(R.string.cer_main) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.cer_main)
-            }
-            getString(R.string.rem_full) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.rem_full)
-            }
-            getString(R.string.rem_part) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.rem_part)
-            }
-            getString(R.string.fix) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.fix)
-            }
-            getString(R.string.cast_main) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.cast_main)
-            }
-            getString(R.string.material) -> {
-                hide(6)
-                setContentOn(R.id.information)
-                dataModel.kind.value = getString(R.string.material)
-            }
-            /* Полные съёмные */
             getString(R.string.bridges) -> {
                 b.tvContent1.text = getString(R.string.acrylic_bridge)
                 b.tvContent2.text = getString(R.string.cast_bridge)
@@ -100,17 +70,12 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 b.tvContent4.text = getString(R.string.pinlay)
                 hide(2)
             }
-            getString(R.string.veneers_lumineers),
             getString(R.string.about_imp),
             getString(R.string.pr_imp),
             getString(R.string.about_cast_on_main),
             getString(R.string.quat),
             getString(R.string.neylon),
             getString(R.string.acry), -> {
-                //тут не будет перехода на другой layout, так как нет выбора
-                //сразу будет здесь контент показываться
-                //или все-таки будет переход на layout, если будет реализован общий layout
-                //для любого контента
                 hide(6)
             }
             getString(R.string.cla) -> {
@@ -127,151 +92,45 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun setContentOn(id: Int) {
+    private fun setContentOn(id: Int, message: Int) {
         supportFragmentManager.beginTransaction().replace(id, InfoContent.newInstance()).commit()
+        dataModel.kind.value = getString(message)
+        hide(6)
     }
 
     override fun onClick(v: View?) {
-        val i = Intent(this, SeparateActivity::class.java)
         when (v?.id) {
             R.id.tvContent1 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> {
-                    Toast.makeText(this, getString(R.string.acrylic_bridge), Toast
-                        .LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.acrylic_bridge))
-                    startActivity(i)
-                }
-                getString(R.string.crowns) -> {
-                    Toast.makeText(this, getString(R.string.acrylic_crown), Toast
-                        .LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.acrylic_crown))
-                    startActivity(i)
-                }
-                getString(R.string.incl) -> {
-                    Toast.makeText(this, getString(R.string.inlayShort), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.inlayShort))
-                    startActivity(i)
-                }
-                getString(R.string.cla) -> {
-                    Toast.makeText(this, getString(R.string.clam), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.clam))
-                    startActivity(i)
-                }
-                getString(R.string.plast) -> {
-                    Toast.makeText(this, getString(R.string.part), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.part))
-                    startActivity(i)
-                }
+                getString(R.string.veneers_lumineers) -> launchSeparate(R.string.veneers_classic)
+                getString(R.string.bridges) -> launchSeparate(R.string.acrylic_bridge)
+                getString(R.string.crowns) -> launchSeparate(R.string.acrylic_crown)
+                getString(R.string.incl) -> launchSeparate(R.string.inlayShort)
+                getString(R.string.cla) -> launchSeparate(R.string.clam)
+                getString(R.string.plast) -> launchSeparate(R.string.part)
             }
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> {
-                    Toast.makeText(this, getString(R.string.cast_bridge), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.cast_bridge))
-                    startActivity(i)
-                }
-                getString(R.string.crowns) -> {
-                    Toast.makeText(this, getString(R.string.cast_crown), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.cast_crown))
-                    startActivity(i)
-                }
-                getString(R.string.incl) -> {
-                    Toast.makeText(this, getString(R.string.onlayShort), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.onlayShort))
-                    startActivity(i)
-                }
-                getString(R.string.cla) -> {
-                    Toast.makeText(this, getString(R.string.attach), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.attach))
-                    startActivity(i)
-                }
-                getString(R.string.plast) -> {
-                    Toast.makeText(this, getString(R.string.whole), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.whole))
-                    startActivity(i)
-                }
+                getString(R.string.bridges) -> launchSeparate(R.string.cast_bridge)
+                getString(R.string.crowns) -> launchSeparate(R.string.cast_crown)
+                getString(R.string.incl) -> launchSeparate(R.string.onlayShort)
+                getString(R.string.cla) -> launchSeparate(R.string.attach)
+                getString(R.string.plast) -> launchSeparate(R.string.whole)
             }
             R.id.tvContent3 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> {
-                    Toast.makeText(this, getString(R.string.met_cer_bridge), Toast
-                        .LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.met_cer_bridge))
-                    startActivity(i)
-                }
-                getString(R.string.crowns) -> {
-                    Toast.makeText(this, getString(R.string.met_cer_crown), Toast
-                        .LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.met_cer_crown))
-                    startActivity(i)
-                }
-                getString(R.string.incl) -> {
-                    Toast.makeText(this, getString(R.string.overlayShort), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest",getString(R.string.overlayShort))
-                    startActivity(i)
-                }
-                getString(R.string.cla) -> {
-                    Toast.makeText(this, getString(R.string.teles), Toast
-                        .LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.teles))
-                    startActivity(i)
-                }
+                getString(R.string.bridges) -> launchSeparate(R.string.met_cer_bridge)
+                getString(R.string.crowns) -> launchSeparate(R.string.met_cer_crown)
+                getString(R.string.incl) -> launchSeparate(R.string.overlayShort)
+                getString(R.string.cla) -> launchSeparate(R.string.teles)
             }
             R.id.tvContent4 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> {
-                    Toast.makeText(this, getString(R.string.zir_bridge), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.zir_bridge))
-                    startActivity(i)
-                }
-                getString(R.string.crowns) -> {
-                    Toast.makeText(this, getString(R.string.zir_crown), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.zir_crown))
-                    startActivity(i)
-                }
-                getString(R.string.incl) -> {
-                    Toast.makeText(this, getString(R.string.pinlayShort), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.pinlayShort))
-                    startActivity(i)
-                }
+                getString(R.string.bridges) -> launchSeparate(R.string.zir_bridge)
+                getString(R.string.crowns) -> launchSeparate(R.string.zir_crown)
+                getString(R.string.incl) -> launchSeparate(R.string.pinlayShort)
             }
             R.id.tvContent5 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> {
-                    Toast.makeText(this, getString(R.string.cer_bridge), Toast.LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.cer_bridge))
-                    startActivity(i)
-                }
-                getString(R.string.crowns) -> {
-                    Toast.makeText(this, getString(R.string.cer_crown), Toast
-                        .LENGTH_SHORT)
-                        .show()
-                    i.putExtra("infoTest", getString(R.string.cer_crown))
-                    startActivity(i)
-                }
+                getString(R.string.bridges) -> launchSeparate(R.string.cer_bridge)
+                getString(R.string.crowns) -> launchSeparate(R.string.cer_crown)
             }
-            R.id.tvContent6 -> {
-                        Toast
-                            .makeText(this, getString(R.string.met_cer_bridge),
-                                Toast.LENGTH_SHORT)
-                            .show()
-                        i.putExtra("infoTest", getString(R.string.met_acrylic_crown))
-                        startActivity(i)
-            }
+            R.id.tvContent6 -> launchSeparate(R.string.met_acrylic_crown)
         }
     }
 
@@ -286,5 +145,12 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
         )
         val border = content.size - number
         for (i in (content.size - 1) downTo border) content[i].visibility = GONE
+    }
+
+    private fun launchSeparate(message: Int) {
+        val i = Intent(this, SeparateActivity::class.java)
+        Toast.makeText(this, getString(message), Toast.LENGTH_SHORT).show()
+        i.putExtra("content", getString(message))
+        startActivity(i)
     }
 }

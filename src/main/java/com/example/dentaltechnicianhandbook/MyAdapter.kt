@@ -26,16 +26,12 @@ class MyAdapter (listArray: ArrayList<ListItem>, context: Context):
         private val tvImage = view.findViewById<ImageView>(R.id.tvImage)
 
         fun bind(listItem: ListItem, context: Context) {
-
             tvTitle.text = listItem.titleText
             val textCon = listItem.contentText.substringBefore(".") + "..."
             tvContent.text = textCon
             tvImage.setImageResource(listItem.imageId)
-
             itemView.setOnClickListener {
-                Toast.makeText(context,"Pressed: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
-                Log.i("MyLog","Pressed: ${tvTitle.text}")
-
+                Toast.makeText(context,"Выбрано: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
                 val i = Intent(context, ContentActivity::class.java).apply {
                     putExtra("title", tvTitle.text.toString())
                     putExtra("content", listItem.contentText)
@@ -51,7 +47,7 @@ class MyAdapter (listArray: ArrayList<ListItem>, context: Context):
         return ViewHolder(inflater.inflate(R.layout.item_layout,parent,false))
     }
 
-    override fun getItemCount(): Int { //получаем количество элементов в нашем списке айтемов
+    override fun getItemCount(): Int {
         return listArrayR.size
     }
 
@@ -64,6 +60,6 @@ class MyAdapter (listArray: ArrayList<ListItem>, context: Context):
     fun updateAdapter(listArray: List<ListItem>) {
         listArrayR.clear()
         listArrayR.addAll(listArray)
-        notifyDataSetChanged() // обновляем адатер
+        notifyDataSetChanged()
     }
 }

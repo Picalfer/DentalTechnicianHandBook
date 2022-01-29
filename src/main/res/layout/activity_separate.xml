@@ -5,28 +5,29 @@
     android:id="@+id/fragmentAcrylicFragment"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_white"
-    android:padding="7dp"
+    android:background="@color/item_content"
     android:scrollbars="none"
+    android:padding="7dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/item_content_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/contentImageAcrylicBridge"
+            android:id="@+id/faceContent"
             style="@style/main_image_content_page"
-            android:contentDescription="@string/content_logo_acrylic_bridge"
             android:src="@drawable/acrylic_bridge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck" />
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/example" />
 
         <TextView
             android:id="@+id/contentLogoText"
@@ -34,7 +35,7 @@
             android:text="@string/content_logo_acrylic_bridge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contentImageAcrylicBridge" />
+            app:layout_constraintTop_toBottomOf="@+id/faceContent" />
 
         <LinearLayout
             android:id="@+id/additional_content1"
@@ -49,7 +50,7 @@
                 style="@style/item_additional_content"
                 android:layout_marginTop="@dimen/margin_top_first_additional_content"
                 android:background="@color/pink_skin"
-                android:onClick="additionalContOne"
+                android:onClick="additionalCont1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -106,7 +107,7 @@
                 android:id="@+id/button_to_open_content2"
                 style="@style/item_additional_content"
                 android:background="@color/gold"
-                android:onClick="additionalContTwo"
+                android:onClick="additionalCont2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -163,7 +164,7 @@
                 android:id="@+id/button_to_open_content3"
                 style="@style/item_additional_content"
                 android:background="@color/green_white"
-                android:onClick="additionalContThree"
+                android:onClick="additionalCont3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -221,7 +222,7 @@
 
                 style="@style/item_additional_content"
                 android:background="@color/dark_blue"
-                android:onClick="additionalContFour"
+                android:onClick="additionalCont4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -264,9 +265,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

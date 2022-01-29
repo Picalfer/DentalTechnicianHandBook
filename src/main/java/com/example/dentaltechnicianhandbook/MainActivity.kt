@@ -19,13 +19,13 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var b: ActivityMainBinding
     private var adapter: MyAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        b = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(b.root)
 
         val navView = findViewById<NavigationView>(R.id.nav_view)
 
@@ -58,48 +58,61 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        val headButton = findViewById<ImageView>(R.id.header_button)
         val rcView = findViewById<RecyclerView>(R.id.rcView)
-
+        rcView.smoothScrollToPosition(0)
         when (item.itemId) {
             R.id.id_main -> {
-                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
-                headButton.setImageResource(R.drawable.header_button_home)
-                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.prosthesis),
-                    resources.getStringArray(R.array.prosthesis_content),
-                    getImageId(R.array.prosthesis_image_array)))
+                setContent(item.title,
+                    R.drawable.header_button_home,
+                    R.array.prosthesis,
+                    R.array.prosthesis_content,
+                    R.array.prosthesis_image_array)
             }
             R.id.id_rem_full -> {
-                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
-                headButton.setImageResource(R.drawable.header_button_rem)
-                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
-                    resources.getStringArray(R.array.rem_prosthesis_content),
-                    getImageId(R.array.rem_prosthesis_image_array)))
+                setContent(item.title,
+                    R.drawable.header_button_rem,
+                    R.array.rem_prosthesis,
+                    R.array.rem_prosthesis_content,
+                    R.array.rem_prosthesis_image_array)
             }
             R.id.id_rem_part -> {
-                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
-                headButton.setImageResource(R.drawable.header_button_rem)
-                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.rem_prosthesis),
-                    resources.getStringArray(R.array.rem_prosthesis_content),
-                    getImageId(R.array.rem_prosthesis_image_array)))
+                setContent(item.title,
+                    R.drawable.header_button_rem,
+                    R.array.rem_prosthesis,
+                    R.array.rem_prosthesis_content,
+                    R.array.rem_prosthesis_image_array)
             }
             R.id.id_fix -> {
-                Toast.makeText(this, "${item.title}", Toast.LENGTH_SHORT).show()
-                headButton.setImageResource(R.drawable.header_button_fix)
-                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.fix_prosthesis),
-                    resources.getStringArray(R.array.fix_prosthesis_content),
-                    getImageId(R.array.fix_prosthesis_image_array)))
+                setContent(item.title,
+                    R.drawable.header_button_fix,
+                    R.array.fix_prosthesis,
+                    R.array.fix_prosthesis_content,
+                    R.array.fix_prosthesis_image_array)
             }
             R.id.id_con -> {
                 val i = Intent(this, ContactsActivity::class.java)
                 startActivity(i)
             }
         }
-        rcView.smoothScrollToPosition(0)
         val drawerLayout: DrawerLayout? = findViewById(R.id.drawerLayout)
         drawerLayout?.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    private fun setContent(
+        title: CharSequence,
+        headerButton: Int,
+        prosthesis: Int,
+        prosthesisContent: Int,
+        prosthesisImageArray: Int
+    ) {
+        val headButton = findViewById<ImageView>(R.id.header_button)
+        Toast.makeText(this, "$title", Toast.LENGTH_SHORT).show()
+        headButton.setImageResource(headerButton)
+        adapter?.updateAdapter(fillArrays(
+            resources.getStringArray(prosthesis),
+            resources.getStringArray(prosthesisContent),
+            getImageId(prosthesisImageArray)))
     }
 
     private fun getImageId(imageArrayId: Int): IntArray {   // function for decode images id

@@ -13,6 +13,7 @@
     <color name="item_center_gradient">#8AE6D3</color>
     <color name="item_end_gradient">#8fd3f4</color>
     <color name="item_content">#C2EEFF</color>
+    <color name="item_content_view">#D5F3FF</color>
     <color name="blue_white">#E7EEFF</color>
     <color name="pink_skin">#F29380</color>
     <color name="gold">#DEC97C</color>
