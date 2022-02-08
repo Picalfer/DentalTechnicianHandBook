@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_theory"
             android:title="@string/main_menu" />
         <item
+            android:id="@+id/id_fix"
+            android:icon="@drawable/acrylic_crown"
+            android:title="@string/fix_menu" />
+        <item
             android:id="@+id/id_rem_full"
             android:icon="@drawable/ic_rem"
             android:title="@string/rem_full_menu" />
@@ -16,10 +20,6 @@
             android:id="@+id/id_rem_part"
             android:icon="@drawable/ic_part_rem"
             android:title="@string/rem_part_menu" />
-        <item
-            android:id="@+id/id_fix"
-            android:icon="@drawable/acrylic_crown"
-            android:title="@string/fix_menu" />
     </group>
     <item android:title="@string/additional">
         <menu>

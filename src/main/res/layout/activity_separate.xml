@@ -85,12 +85,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/button_to_open_content">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/app_name"
+                    android:id="@+id/plusMinus"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/separate_text" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -142,15 +141,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/button_to_open_content">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/app_name"
+                    android:id="@+id/indications"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/separate_text" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -184,7 +180,6 @@
                     android:text="@string/materials_and_equipment"
                     app:layout_constraintStart_toEndOf="@+id/icon_select3"
                     app:layout_constraintTop_toTopOf="@+id/icon_select3" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -199,15 +194,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/button_to_open_content">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/app_name"
+                    android:id="@+id/materials"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/separate_text" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -242,7 +234,6 @@
                     android:text="@string/stages_of_manufacturing"
                     app:layout_constraintStart_toEndOf="@+id/icon_select4"
                     app:layout_constraintTop_toTopOf="@+id/icon_select4" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -256,14 +247,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_to_open_content">
 
-                <TextView
+                <FrameLayout
+                    android:id="@+id/steps"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/app_name"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="10dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,15 @@
             android:id="@+id/tv3"
             style="@style/tv_content" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/im4"
+            android:visibility="gone"
+            style="@style/im_content" />
 
+        <TextView
+            android:id="@+id/tv4"
+            android:visibility="gone"
+            style="@style/tv_content" />
+
+    </LinearLayout>
 </FrameLayout>

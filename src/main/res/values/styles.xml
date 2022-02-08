@@ -79,4 +79,10 @@
         <item name="android:layout_marginEnd">@dimen/side_margin_tv_content</item>
         <item name="android:layout_height">270dp</item>
     </style>
+
+    <style name="separate_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_text</item>
+    </style>
 </resources>

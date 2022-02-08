@@ -61,6 +61,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val rcView = findViewById<RecyclerView>(R.id.rcView)
         rcView.smoothScrollToPosition(0)
         when (item.itemId) {
+            R.id.id_fix -> {
+                setContent(item.title,
+                    R.drawable.header_button_fix,
+                    R.array.fix_prosthesis,
+                    R.array.fix_prosthesis_content,
+                    R.array.fix_prosthesis_image_array)
+            }
             R.id.id_main -> {
                 setContent(item.title,
                     R.drawable.header_button_home,
@@ -81,13 +88,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.array.rem_prosthesis,
                     R.array.rem_prosthesis_content,
                     R.array.rem_prosthesis_image_array)
-            }
-            R.id.id_fix -> {
-                setContent(item.title,
-                    R.drawable.header_button_fix,
-                    R.array.fix_prosthesis,
-                    R.array.fix_prosthesis_content,
-                    R.array.fix_prosthesis_image_array)
             }
             R.id.id_con -> {
                 val i = Intent(this, ContactsActivity::class.java)
