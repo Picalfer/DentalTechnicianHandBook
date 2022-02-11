@@ -31,6 +31,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
         b.tvContent5.setOnClickListener(this)
         b.tvContent6.setOnClickListener(this)
         b.tvContent6.setOnClickListener(this)
+        b.tvContent7.setOnClickListener(this)
 
         when (intent.getStringExtra("title")) {
             /* Главная */
@@ -45,7 +46,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             /* Несъёмные */
             getString(R.string.veneers_lumineers) -> {
                 b.tvContent1.text = getString(R.string.veneers_classic)
-                hide(5)
+                hide(6)
             }
             getString(R.string.bridges) -> {
                 b.tvContent1.text = getString(R.string.acrylic_bridge)
@@ -53,22 +54,23 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 b.tvContent3.text = getString(R.string.met_cer_bridge)
                 b.tvContent4.text = getString(R.string.zir_bridge)
                 b.tvContent5.text = getString(R.string.cer_bridge)
-                hide(1)
+                hide(2)
             }
             getString(R.string.crowns) -> {
                 b.tvContent1.text = getString(R.string.acrylic_crown)
-                b.tvContent2.text = getString(R.string.cast_crown)
+                b.tvContent2.text = getString(R.string.stamped_crown)
                 b.tvContent3.text = getString(R.string.met_cer_crown)
                 b.tvContent4.text = getString(R.string.zir_crown)
                 b.tvContent5.text = getString(R.string.cer_crown)
                 b.tvContent6.text = getString(R.string.met_acrylic_crown)
+                b.tvContent7.text = getString(R.string.cast_crown)
             }
             getString(R.string.incl) -> {
                 b.tvContent1.text = getString(R.string.inlay)
                 b.tvContent2.text = getString(R.string.onlay)
                 b.tvContent3.text = getString(R.string.overlay)
                 b.tvContent4.text = getString(R.string.pinlay)
-                hide(2)
+                hide(3)
             }
             getString(R.string.about_imp),
             getString(R.string.pr_imp),
@@ -76,18 +78,18 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             getString(R.string.quat),
             getString(R.string.neylon),
             getString(R.string.acry), -> {
-                hide(6)
+                hide(7)
             }
             getString(R.string.cla) -> {
                 b.tvContent1.text = getString(R.string.clam)
                 b.tvContent2.text = getString(R.string.attach)
                 b.tvContent3.text = getString(R.string.teles)
-                hide(3)
+                hide(4)
             }
             getString(R.string.plast) -> {
                 b.tvContent1.text = getString(R.string.part)
                 b.tvContent2.text = getString(R.string.whole)
-                hide(4)
+                hide(5)
             }
         }
     }
@@ -95,7 +97,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
     private fun setContentOn(id: Int, message: Int) {
         supportFragmentManager.beginTransaction().replace(id, InfoContent.newInstance()).commit()
         dataModel.kind.value = getString(message)
-        hide(6)
+        hide(7)
     }
 
     override fun onClick(v: View?) {
@@ -110,7 +112,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             }
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.cast_bridge)
-                getString(R.string.crowns) -> launchSeparate(R.string.cast_crown)
+                getString(R.string.crowns) -> launchSeparate(R.string.stamped_crown)
                 getString(R.string.incl) -> launchSeparate(R.string.onlayShort)
                 getString(R.string.cla) -> launchSeparate(R.string.attach)
                 getString(R.string.plast) -> launchSeparate(R.string.whole)
@@ -131,6 +133,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.crowns) -> launchSeparate(R.string.cer_crown)
             }
             R.id.tvContent6 -> launchSeparate(R.string.met_acrylic_crown)
+            R.id.tvContent7 -> launchSeparate(R.string.cast_crown)
         }
     }
 
@@ -141,7 +144,8 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             tvContent3,
             tvContent4,
             tvContent5,
-            tvContent6
+            tvContent6,
+            tvContent7
         )
         val border = content.size - number
         for (i in (content.size - 1) downTo border) content[i].visibility = GONE

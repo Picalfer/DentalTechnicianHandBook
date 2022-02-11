@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.example.dentaltechnicianhandbook.DataModel
-import com.example.dentaltechnicianhandbook.R
 import com.example.dentaltechnicianhandbook.R.drawable.*
 import com.example.dentaltechnicianhandbook.R.string
 import com.example.dentaltechnicianhandbook.databinding.FragmentInfoContentBinding
@@ -109,6 +108,16 @@ class InfoContent : Fragment() {
                     acrylic_crown3,
                     acrylic_crown4,
                     string.acrylic_crown_steps4
+                )
+                stamped_crown -> setContent(
+                    string.stamped_crown_steps1,
+                    string.stamped_crown_steps2,
+                    string.stamped_crown_steps3,
+                    stamped1,
+                    stamped2,
+                    stamped3,
+                    stamped4,
+                    string.stamped_crown_steps4
                 )
             }
         }

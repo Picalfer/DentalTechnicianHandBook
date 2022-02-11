@@ -33,6 +33,12 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.acrylic_crown_plus,
                 R.string.acrylic_crown_indication,
                 R.string.acrylic_crown_materials)
+            getString(R.string.stamped_crown) -> setContent(
+                R.drawable.stamped_crown,
+                R.string.stamped_crown,
+                R.string.stamped_crown_plus,
+                R.string.stamped_crown_indication,
+                R.string.stamped_crown_materials)
             /*getString(R.string.cast_crown) -> setContent(
                 R.drawable.cast_crown,
                 R.string.cast_crown)
