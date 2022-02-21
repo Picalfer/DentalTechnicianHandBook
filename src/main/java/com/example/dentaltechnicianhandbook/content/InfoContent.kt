@@ -119,6 +119,16 @@ class InfoContent : Fragment() {
                     stamped4,
                     string.stamped_crown_steps4
                 )
+                met_cer_crown -> setContent(
+                    string.met_cer_crown_steps1,
+                    string.met_cer_crown_steps2,
+                    string.met_cer_crown_steps3,
+                    met_cer_crown1,
+                    met_cer_crown2,
+                    met_cer_crown3,
+                    met_cer_crown4,
+                    string.met_cer_crown_steps4
+                )
             }
         }
     }
