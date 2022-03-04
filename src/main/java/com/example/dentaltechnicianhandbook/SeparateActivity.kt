@@ -45,10 +45,15 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.met_cer_crown_plus,
                 R.string.met_cer_crown_indication,
                 R.string.met_cer_crown_materials)
+            getString(R.string.zir_crown) -> setContent(
+                R.drawable.zir_crown,
+                R.string.zir_crown,
+                R.string.zir_crown_plus,
+                R.string.zir_crown_indication,
+                R.string.zir_crown_materials)
             /*getString(R.string.cast_crown) -> setContent(
                 R.drawable.cast_crown,
                 R.string.cast_crown)
-            getString(R.string.zir_crown) -> setContent(R.drawable.zir_crown, R.string.zir_crown)
             getString(R.string.cer_crown) -> setContent(R.drawable.cer_crown, R.string.cer_crown)
             getString(R.string.met_acrylic_crown) -> setContent(R.drawable.met_acrylic_crown, R.string.met_acrylic_crown)
             getString(R.string.acrylic_bridge) -> setContent(
