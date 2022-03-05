@@ -137,6 +137,24 @@ class InfoContent : Fragment() {
                     zir_crown2,
                     zir_crown3
                 )
+                cer_crown -> setContent(
+                    string.cer_crown_steps1,
+                    string.cer_crown_steps2,
+                    string.cer_crown_steps3,
+                    cer_crown1,
+                    cer_crown2,
+                    cer_crown3,
+                )
+                met_acrylic_crown -> setContent(
+                    string.met_acrylic_crown_steps1,
+                    string.met_acrylic_crown_steps2,
+                    string.met_acrylic_crown_steps3,
+                    met_acrylic_crown1,
+                    met_acrylic_crown2,
+                    met_acrylic_crown3,
+                    met_acrylic_crown4,
+                    string.met_acrylic_crown_steps4,
+                )
             }
         }
     }
