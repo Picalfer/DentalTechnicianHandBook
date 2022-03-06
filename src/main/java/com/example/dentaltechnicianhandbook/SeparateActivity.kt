@@ -69,11 +69,14 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.cast_crown_plus,
                 R.string.cast_crown_indication,
                 R.string.cast_crown_materials)
-            /*
             getString(R.string.acrylic_bridge) -> setContent(
                 R.drawable.acrylic_bridge,
                 R.string.content_logo_acrylic_bridge,
-                R.string.acrylic_bridge_plus)
+                R.string.acrylic_crown_plus,
+                R.string.acrylic_crown_indication,
+                R.string.acrylic_crown_materials,)
+            /*
+
             getString(R.string.cast_bridge) -> setContent(R.drawable.cast_bridge, R.string.cast_bridge)
             getString(R.string.met_cer_bridge) -> setContent(R.drawable.met_cer_bridge, R.string.met_cer_bridge)
             getString(R.string.cer_bridge) -> setContent(R.drawable.cer_bridge, R.string.cer_bridge)

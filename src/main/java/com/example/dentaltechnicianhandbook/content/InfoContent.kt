@@ -163,6 +163,16 @@ class InfoContent : Fragment() {
                     cast_crown2,
                     cast_crown3,
                 )
+                acrylic_bridge -> setContent(
+                    string.acrylic_crown_steps1,
+                    string.acrylic_crown_steps2,
+                    string.acrylic_crown_steps3,
+                    material2,
+                    acrylic_bridge1,
+                    acrylic_bridge2,
+                    zir_bridge,
+                    string.acrylic_crown_steps4
+                )
             }
         }
     }
