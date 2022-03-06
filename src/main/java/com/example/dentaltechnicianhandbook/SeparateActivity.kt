@@ -63,9 +63,13 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.met_acrylic_crown_plus,
                 R.string.met_acrylic_crown_indication,
                 R.string.met_acrylic_crown_materials)
-            /*getString(R.string.cast_crown) -> setContent(
+            getString(R.string.cast_crown) -> setContent(
                 R.drawable.cast_crown,
-                R.string.cast_crown)
+                R.string.cast_crown,
+                R.string.cast_crown_plus,
+                R.string.cast_crown_indication,
+                R.string.cast_crown_materials)
+            /*
             getString(R.string.acrylic_bridge) -> setContent(
                 R.drawable.acrylic_bridge,
                 R.string.content_logo_acrylic_bridge,

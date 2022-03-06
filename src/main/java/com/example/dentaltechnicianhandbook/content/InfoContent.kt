@@ -155,6 +155,14 @@ class InfoContent : Fragment() {
                     met_acrylic_crown4,
                     string.met_acrylic_crown_steps4,
                 )
+                cast_crown -> setContent(
+                    string.cast_crown_steps1,
+                    string.cast_crown_steps2,
+                    string.cast_crown_steps3,
+                    cast_crown1,
+                    cast_crown2,
+                    cast_crown3,
+                )
             }
         }
     }
