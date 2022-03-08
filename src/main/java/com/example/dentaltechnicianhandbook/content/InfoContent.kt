@@ -183,6 +183,24 @@ class InfoContent : Fragment() {
                     0,
                     string.stamp_met_bridge_steps4
                 )
+                cast_bridge -> setContent(
+                    string.cast_bridge_steps1,
+                    string.cast_bridge_steps2,
+                    string.cast_bridge_steps3,
+                    cast_bridge1,
+                    met_acrylic_crown4,
+                    cast_bridge3,
+                    fix2,
+                    string.cast_bridge_steps4
+                )
+                met_acrylic_bridge -> setContent(
+                    string.met_acrylic_bridge_steps1,
+                    string.met_acrylic_bridge_steps2,
+                    string.met_acrylic_bridge_steps3,
+                    cast_bridge1,
+                    met_acrylic_crown2,
+                    met_cer_bridge
+                )
             }
         }
     }
