@@ -173,6 +173,16 @@ class InfoContent : Fragment() {
                     zir_bridge,
                     string.acrylic_crown_steps4
                 )
+                stamp_met_bridge -> setContent(
+                    string.stamp_met_bridge_steps1,
+                    string.stamp_met_bridge_steps2,
+                    string.stamp_met_bridge_steps3,
+                    stamp_met_bridge1,
+                    stamp_met_bridge2,
+                    stamp_met_bridge3,
+                    0,
+                    string.stamp_met_bridge_steps4
+                )
             }
         }
     }

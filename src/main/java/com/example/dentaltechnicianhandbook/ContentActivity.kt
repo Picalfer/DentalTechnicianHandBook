@@ -50,11 +50,12 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             }
             getString(R.string.bridges) -> {
                 b.tvContent1.text = getString(R.string.acrylic_bridge)
-                b.tvContent2.text = getString(R.string.cast_bridge)
-                b.tvContent3.text = getString(R.string.met_cer_bridge)
-                b.tvContent4.text = getString(R.string.zir_bridge)
+                b.tvContent2.text = getString(R.string.stamp_met_bridge)
+                b.tvContent3.text = getString(R.string.cast_bridge)
+                b.tvContent4.text = getString(R.string.met_acrylic_bridge)
                 b.tvContent5.text = getString(R.string.cer_bridge)
-                hide(2)
+                b.tvContent6.text = getString(R.string.met_cer_bridge)
+                b.tvContent7.text = getString(R.string.zir_bridge)
             }
             getString(R.string.crowns) -> {
                 b.tvContent1.text = getString(R.string.acrylic_crown)
@@ -111,20 +112,20 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.plast) -> launchSeparate(R.string.part)
             }
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> launchSeparate(R.string.cast_bridge)
+                getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.stamped_crown)
                 getString(R.string.incl) -> launchSeparate(R.string.onlayShort)
                 getString(R.string.cla) -> launchSeparate(R.string.attach)
                 getString(R.string.plast) -> launchSeparate(R.string.whole)
             }
             R.id.tvContent3 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> launchSeparate(R.string.met_cer_bridge)
+                getString(R.string.bridges) -> launchSeparate(R.string.cast_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.met_cer_crown)
                 getString(R.string.incl) -> launchSeparate(R.string.overlayShort)
                 getString(R.string.cla) -> launchSeparate(R.string.teles)
             }
             R.id.tvContent4 -> when (intent.getStringExtra("title")) {
-                getString(R.string.bridges) -> launchSeparate(R.string.zir_bridge)
+                getString(R.string.bridges) -> launchSeparate(R.string.met_acrylic_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.zir_crown)
                 getString(R.string.incl) -> launchSeparate(R.string.pinlayShort)
             }
@@ -132,8 +133,14 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.bridges) -> launchSeparate(R.string.cer_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.cer_crown)
             }
-            R.id.tvContent6 -> launchSeparate(R.string.met_acrylic_crown)
-            R.id.tvContent7 -> launchSeparate(R.string.cast_crown)
+            R.id.tvContent6 -> when (intent.getStringExtra("title")) {
+                getString(R.string.crowns) -> launchSeparate(R.string.met_acrylic_crown)
+                getString(R.string.bridges) -> launchSeparate(R.string.met_cer_bridge)
+            }
+            R.id.tvContent7 -> when (intent.getStringExtra("title")) {
+                getString(R.string.crowns) -> launchSeparate(R.string.cast_crown)
+                getString(R.string.bridges) ->launchSeparate(R.string.zir_bridge)
+            }
         }
     }
 
