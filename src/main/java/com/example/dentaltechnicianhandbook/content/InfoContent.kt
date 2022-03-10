@@ -16,7 +16,7 @@ import com.example.dentaltechnicianhandbook.databinding.FragmentInfoContentBindi
 class InfoContent : Fragment() {
 
     private lateinit var b: FragmentInfoContentBinding
-    private val dataModel:DataModel by activityViewModels()
+    private val dataModel: DataModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,63 +28,71 @@ class InfoContent : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         dataModel.kind.observe(activity as LifecycleOwner) {
-            when(it) {
+            when (it) {
                 getString(string.imp) -> setContent(
                     string.imp1,
                     string.imp2,
                     string.imp3,
                     imp1,
                     imp2,
-                    imp3)
+                    imp3
+                )
                 getString(string.cad_cam) -> setContent(
                     string.cad_cam1,
                     string.cad_cam2,
                     string.cad_cam3,
                     cad_cam1,
                     cad_cam2,
-                    cad_cam3)
-                getString(string.cer_main) ->  setContent(
+                    cad_cam3
+                )
+                getString(string.cer_main) -> setContent(
                     string.cer_main1,
                     string.cer_main2,
                     string.cer_main3,
                     cer_main1,
                     cer_main2,
-                    cer_main3)
+                    cer_main3
+                )
                 getString(string.rem_full) -> setContent(
                     string.rem_full1,
                     string.rem_full2,
                     string.rem_full3,
                     rem_full1,
                     rem_full2,
-                    rem_full3)
+                    rem_full3
+                )
                 getString(string.rem_part) -> setContent(
                     string.rem_part1,
                     string.rem_part2,
                     string.rem_part3,
                     rem_part1,
                     rem_part2,
-                    rem_part3)
+                    rem_part3
+                )
                 getString(string.fix) -> setContent(
                     string.fix1,
                     string.fix2,
                     string.fix3,
                     fix1,
                     fix2,
-                    fix3)
+                    fix3
+                )
                 getString(string.cast_main) -> setContent(
                     string.cast_main1,
                     string.cast_main2,
                     string.cast_main3,
                     cast_main1,
                     cast_main2,
-                    cast_main3)
+                    cast_main3
+                )
                 getString(string.material) -> setContent(
                     string.material1,
                     string.material2,
                     string.material3,
                     material1,
                     material2,
-                    material3)
+                    material3
+                )
             }
         }
         dataModel.steps.observe(activity as LifecycleOwner) {
@@ -144,7 +152,9 @@ class InfoContent : Fragment() {
                     cer_crown1,
                     cer_crown2,
                     cer_crown3,
-                )
+                    0,
+                    string.cer_crown_steps4
+                    )
                 met_acrylic_crown -> setContent(
                     string.met_acrylic_crown_steps1,
                     string.met_acrylic_crown_steps2,
@@ -201,6 +211,25 @@ class InfoContent : Fragment() {
                     met_acrylic_crown2,
                     met_cer_bridge
                 )
+                /* not done*/
+                cer_bridge -> setContent(
+                    string.cer_crown_steps4,
+                    string.cer_crown_steps1,
+                    string.cer_crown_steps2,
+                    cast_main1,
+                    cast_main1,
+                    cer_bridge3,
+                    string.cer_crown_steps3,
+                )
+                met_cer_bridge -> setContent(
+                    string.cer_crown_steps4,
+                    string.cer_crown_steps1,
+                    string.cer_crown_steps2,
+                    cast_main1,
+                    cast_main1,
+                    cer_bridge3,
+                    string.cer_crown_steps3,
+                )
             }
         }
     }
@@ -210,7 +239,16 @@ class InfoContent : Fragment() {
         fun newInstance() = InfoContent()
     }
 
-    private fun setContent(str1: Int, str2: Int, str3: Int, im1: Int, im2: Int, im3: Int, im4: Int = 0, str4: Int = 0) = with(b) {
+    private fun setContent(
+        str1: Int,
+        str2: Int,
+        str3: Int,
+        im1: Int,
+        im2: Int,
+        im3: Int,
+        im4: Int = 0,
+        str4: Int = 0
+    ) = with(b) {
         tv1.text = getString(str1)
         tv2.text = getString(str2)
         tv3.text = getString(str3)

@@ -37,6 +37,7 @@
     <string name="cer">Керамика</string>
     <string name="cla">Бюгельные</string>
     <string name="pr_imp">Протезы на имплантах</string>
+    <string name="e_max">Вкладка E-max</string>
     <string name="header">DentalTechnician HandBook</string>
     <string name="logo">logo</string>
     <string name="additional">Дополнительно</string>
@@ -48,6 +49,7 @@
     <string name="prothesis">протез</string>
     <string name="veneers_lumineers">Виниры(люминиры)</string>
     <string name="incl">Вкладки</string>
+    <string name="incl_e_max">Вкладки E-max</string>
     <string name="crowns">Коронки</string>
     <string name="bridges">Мостовидные протезы</string>
     <string name="quat">Квадротти (Quattro Ti)</string>
@@ -77,6 +79,10 @@
     <string name="zir_crown">Циркониевая коронка</string>
     <string name="cer_crown">Керамическая коронка</string>
     <string name="met_acrylic_crown">Металлопластмассовая коронка</string>
+
+
+    <string name="collapsible">Разборные вкладки</string>
+    <string name="non_separable">Не разборные вкладки</string>
 
     <string name="inlay">InLay (Тело вкладки не выходит за пределы бугров зуба)</string>
     <string name="inlayShort">InLay</string>
@@ -567,7 +573,7 @@
         \n•	не вызывает аллергию;
         \n•	нет необходимости обтачивать сильно зуб;
         \n•	плотно прилегает к стенкам зуба и десне;
-        \n•	риск развития кариеса минимальна.
+        \n•	риск развития кариеса минимальный.
         \n
         \nМинусы:
         \n•	не всегда подходят для жевательных зубов;
@@ -599,7 +605,9 @@
     </string>
     <string name="cer_crown_steps3">
         Окончательную обработку, подкрашивание и глазурование проводят по тому же принципу, что и литой керамической коронки.
-        \nПри изготовлении мостовидного протеза все технологические этапы соответствуют вышеописанным. Особенность изготовления мостовидного протеза состоит в том, что проводить глубокую межзубную сепарацию ни в коем случае нельзя. Толщина соединения опорных частей мостовидного протеза с промежуточной частью не должна быть тоньше 4 мм, т.е. должен образовываться квадрат в месте прикрепления опорных частей мостовидного протеза и промежуточной части, толщина и высота которого составляет не меньше 4 мм.
+    </string>
+    <string name="cer_crown_steps4">
+        При изготовлении мостовидного протеза все технологические этапы соответствуют этапам изготовления коронки. Особенность изготовления мостовидного протеза состоит в том, что проводить глубокую межзубную сепарацию ни в коем случае нельзя. Толщина соединения опорных частей мостовидного протеза с промежуточной частью не должна быть тоньше 4 мм, т.е. должен образовываться квадрат в месте прикрепления опорных частей мостовидного протеза и промежуточной части, толщина и высота которого составляет не меньше 4 мм.
     </string>
     <!-- met_acrylic_crown -->
     <string name="met_acrylic_crown_plus">
@@ -868,4 +876,9 @@
         \n— 7-й этап - клинический:
         \n◊ наложение и фиксация металлопластмассового или металлокомпозитного зубного протеза в полости рта.
     </string>
+    <string name="met_cer_bridge_plus">null</string>
+    <string name="met_cer_bridge_indication">null</string>
+    <string name="zir_bridge_indication">null</string>
+    <string name="zir_bridge_plus">zir_bridge</string>
+
 </resources>

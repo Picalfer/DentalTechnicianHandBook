@@ -24,6 +24,10 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
         b.tvContent.text = intent.getStringExtra("content")
         b.imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
 
+        /*with(b) { // узнать как отметить класс ContentActivity вместо слова this и с коратить тем самым код и не писать б
+            tvContent1.setOnClickListener()
+            tvContent2.setOnClickListener(this)
+        }*/
         b.tvContent1.setOnClickListener(this)
         b.tvContent2.setOnClickListener(this)
         b.tvContent3.setOnClickListener(this)
@@ -48,15 +52,6 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 b.tvContent1.text = getString(R.string.veneers_classic)
                 hide(6)
             }
-            getString(R.string.bridges) -> {
-                b.tvContent1.text = getString(R.string.acrylic_bridge)
-                b.tvContent2.text = getString(R.string.stamp_met_bridge)
-                b.tvContent3.text = getString(R.string.cast_bridge)
-                b.tvContent4.text = getString(R.string.met_acrylic_bridge)
-                b.tvContent5.text = getString(R.string.cer_bridge)
-                b.tvContent6.text = getString(R.string.met_cer_bridge)
-                b.tvContent7.text = getString(R.string.zir_bridge)
-            }
             getString(R.string.crowns) -> {
                 b.tvContent1.text = getString(R.string.acrylic_crown)
                 b.tvContent2.text = getString(R.string.stamped_crown)
@@ -66,12 +61,29 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 b.tvContent6.text = getString(R.string.met_acrylic_crown)
                 b.tvContent7.text = getString(R.string.cast_crown)
             }
+            getString(R.string.bridges) -> {
+                b.tvContent1.text = getString(R.string.acrylic_bridge) // можно сократить код с помощью команда with
+                b.tvContent2.text = getString(R.string.stamp_met_bridge)
+                b.tvContent3.text = getString(R.string.cast_bridge)
+                b.tvContent4.text = getString(R.string.met_acrylic_bridge)
+                b.tvContent5.text = getString(R.string.cer_bridge)
+                b.tvContent6.text = getString(R.string.met_cer_bridge)
+                b.tvContent7.text = getString(R.string.zir_bridge)
+            }
             getString(R.string.incl) -> {
-                b.tvContent1.text = getString(R.string.inlay)
+                /*b.tvContent1.text = getString(R.string.inlay)
                 b.tvContent2.text = getString(R.string.onlay)
                 b.tvContent3.text = getString(R.string.overlay)
-                b.tvContent4.text = getString(R.string.pinlay)
-                hide(3)
+                b.tvContent4.text = getString(R.string.pinlay)*/
+                with(b) {
+                    tvContent1.text = getString(R.string.collapsible)
+                    tvContent2.text = getString(R.string.non_separable)
+                }
+                hide(5)
+            }
+            getString(R.string.incl_e_max) -> {
+                b.tvContent1.text = getString(R.string.e_max)
+                hide(6)
             }
             getString(R.string.about_imp),
             getString(R.string.pr_imp),
@@ -94,6 +106,14 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+    /*private fun setItems(cont1: String, cont2: String) {  -- написать функцию которая сокращает дей-я заполнения итемов контентом
+    // использовать сокращение чтобы не писать миллион раз b. и тд ( with  и что-то там вроде.. )
+        b.tvContent1.text = cont1
+        b.tvContent2.text = cont2
+        var i = 1
+        for i in 7
+    }*/
 
     private fun setContentOn(id: Int, message: Int) {
         supportFragmentManager.beginTransaction().replace(id, InfoContent.newInstance()).commit()
