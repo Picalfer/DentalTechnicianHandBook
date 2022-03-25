@@ -103,16 +103,15 @@ class SeparateActivity : AppCompatActivity() {
             getString(R.string.met_cer_bridge) -> setContent(
                 R.drawable.met_cer_bridge,
                 R.string.met_cer_bridge,
-                R.string.met_cer_bridge_plus,
-                R.string.met_cer_bridge_indication,
+                R.string.met_cer_crown_plus,
+                R.string.met_cer_crown_indication,
                 R.string.met_acrylic_crown_materials)
             getString(R.string.zir_bridge) -> setContent(
                 R.drawable.zir_bridge,
                 R.string.zir_bridge,
                 R.string.zir_bridge_plus,
                 R.string.zir_bridge_indication,
-                R.string.met_acrylic_crown_materials
-                )
+                R.string.met_acrylic_crown_materials)
         }
     }
 
