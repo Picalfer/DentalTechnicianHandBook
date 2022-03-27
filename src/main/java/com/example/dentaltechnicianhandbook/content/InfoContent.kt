@@ -221,16 +221,15 @@ class InfoContent : Fragment() {
                     0,
                     string.cer_crown_steps3
                 )
-                /* not done*/
                 met_cer_bridge -> setContent(
-                    string.cer_crown_steps4,
-                    string.cer_crown_steps1,
-                    string.cer_crown_steps2,
-                    cast_main1,
-                    cast_main1,
-                    cer_bridge3,
-                    0,
-                    string.cer_crown_steps3
+                    string.met_cer_bridge_steps1,
+                    string.met_cer_bridge_steps2,
+                    string.met_cer_bridge_steps3,
+                    ottisk,
+                    met_acrylic_crown2,
+                    met_cer_bridge3,
+                    met_cer_bridge4,
+                    string.met_cer_bridge_steps4
                 )
             }
         }
