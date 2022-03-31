@@ -240,6 +240,16 @@ class InfoContent : Fragment() {
                     zir_crown2,
                     zir_bridge1
                 )
+                tab -> setContent(
+                    string.tab_steps1,
+                    string.tab_steps2,
+                    string.tab_steps3,
+                    tab1,
+                    tab2,
+                    tab3,
+                    0,
+                    string.tab_steps4,
+                )
             }
         }
     }

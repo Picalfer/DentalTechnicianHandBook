@@ -20,25 +20,30 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
         b = ContentItemBinding.inflate(layoutInflater)
         setContentView(b.root)
 
-        b.tvTitleContent2.text = intent.getStringExtra("title")
-        b.tvContent.text = intent.getStringExtra("content")
-        b.imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
+        with(b) {
+            tvTitleContent2.text = intent.getStringExtra("title")
+            tvContent.text = intent.getStringExtra("content")
+            imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
+        }
 
         /*with(b) { // узнать как отметить класс ContentActivity вместо слова this и с коратить тем самым код и не писать б
             tvContent1.setOnClickListener()
             tvContent2.setOnClickListener(this)
         }*/
-        b.tvContent1.setOnClickListener(this)
-        b.tvContent2.setOnClickListener(this)
-        b.tvContent3.setOnClickListener(this)
-        b.tvContent4.setOnClickListener(this)
-        b.tvContent5.setOnClickListener(this)
-        b.tvContent6.setOnClickListener(this)
-        b.tvContent6.setOnClickListener(this)
-        b.tvContent7.setOnClickListener(this)
 
-        when (intent.getStringExtra("title")) {
+        with(b) {
+            tvContent1.setOnClickListener(this@ContentActivity)
+            tvContent2.setOnClickListener(this@ContentActivity)
+            tvContent3.setOnClickListener(this@ContentActivity)
+            tvContent4.setOnClickListener(this@ContentActivity)
+            tvContent5.setOnClickListener(this@ContentActivity)
+            tvContent6.setOnClickListener(this@ContentActivity)
+            tvContent6.setOnClickListener(this@ContentActivity)
+            tvContent7.setOnClickListener(this@ContentActivity)
+        }
+
             /* Главная */
+        when (intent.getStringExtra("title")) {
             getString(R.string.imp) -> setContentOn(R.id.information, R.string.imp)
             getString(R.string.cad_cam) -> setContentOn(R.id.information, R.string.cad_cam)
             getString(R.string.cer_main) -> setContentOn(R.id.information, R.string.cer_main)
@@ -53,34 +58,40 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 hide(6)
             }
             getString(R.string.crowns) -> {
-                b.tvContent1.text = getString(R.string.acrylic_crown)
-                b.tvContent2.text = getString(R.string.stamped_crown)
-                b.tvContent3.text = getString(R.string.met_cer_crown)
-                b.tvContent4.text = getString(R.string.zir_crown)
-                b.tvContent5.text = getString(R.string.cer_crown)
-                b.tvContent6.text = getString(R.string.met_acrylic_crown)
-                b.tvContent7.text = getString(R.string.cast_crown)
+                with(b) {
+                    tvContent1.text = getString(R.string.acrylic_crown)
+                    tvContent2.text = getString(R.string.stamped_crown)
+                    tvContent3.text = getString(R.string.met_cer_crown)
+                    tvContent4.text = getString(R.string.zir_crown)
+                    tvContent6.text = getString(R.string.met_acrylic_crown)
+                    tvContent5.text = getString(R.string.cer_crown)
+                    tvContent7.text = getString(R.string.cast_crown)
+                }
             }
             getString(R.string.bridges) -> {
-                b.tvContent1.text = getString(R.string.acrylic_bridge) // можно сократить код с помощью команда with
-                b.tvContent2.text = getString(R.string.stamp_met_bridge)
-                b.tvContent3.text = getString(R.string.cast_bridge)
-                b.tvContent4.text = getString(R.string.met_acrylic_bridge)
-                b.tvContent5.text = getString(R.string.cer_bridge)
-                b.tvContent6.text = getString(R.string.met_cer_bridge)
-                b.tvContent7.text = getString(R.string.zir_bridge)
+                with(b) {
+                    tvContent1.text = getString(R.string.acrylic_bridge) // можно сократить код с помощью команда with
+                    tvContent2.text = getString(R.string.stamp_met_bridge)
+                    tvContent3.text = getString(R.string.cast_bridge)
+                    tvContent4.text = getString(R.string.met_acrylic_bridge)
+                    tvContent5.text = getString(R.string.cer_bridge)
+                    tvContent6.text = getString(R.string.met_cer_bridge)
+                    tvContent7.text = getString(R.string.zir_bridge)
+                }
             }
             getString(R.string.incl) -> {
-                /*b.tvContent1.text = getString(R.string.inlay)
+                with(b) {
+                    tvContent1.text = getString(R.string.tabs)
+                }
+                hide(6)
+            }
+
+            /*b.tvContent1.text = getString(R.string.inlay)
                 b.tvContent2.text = getString(R.string.onlay)
                 b.tvContent3.text = getString(R.string.overlay)
-                b.tvContent4.text = getString(R.string.pinlay)*/
-                with(b) {
-                    tvContent1.text = getString(R.string.collapsible)
-                    tvContent2.text = getString(R.string.non_separable)
-                }
-                hide(5)
-            }
+                b.tvContent4.text = getString(R.string.pinlay)
+                */
+
             /*getString(R.string.incl_e_max) -> { -или новый способ чтобы отдельный фрагмент запкскался при таких одиночных карточках либо
             по тупому сделат чтобы был единичный выбор
                 b.tvContent1.text = getString(R.string.e_max)
@@ -101,9 +112,11 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 hide(7)
             }
             getString(R.string.cla) -> {
-                b.tvContent1.text = getString(R.string.clam)
-                b.tvContent2.text = getString(R.string.attach)
-                b.tvContent3.text = getString(R.string.teles)
+                with(b) {
+                    tvContent1.text = getString(R.string.clam)
+                    tvContent2.text = getString(R.string.attach)
+                    tvContent3.text = getString(R.string.teles)
+                }
                 hide(4)
             }
             getString(R.string.plast) -> {
@@ -134,7 +147,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.veneers_lumineers) -> launchSeparate(R.string.veneers_classic)
                 getString(R.string.bridges) -> launchSeparate(R.string.acrylic_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.acrylic_crown)
-                getString(R.string.incl) -> launchSeparate(R.string.collapsible)
+                getString(R.string.incl) -> launchSeparate(R.string.tabs)
                 getString(R.string.incl_e_max) -> launchSeparate(R.string.e_max)
                 getString(R.string.cad_cam_title) -> launchSeparate(R.string.use_cad_cam)
                 getString(R.string.cla) -> launchSeparate(R.string.clam)
@@ -143,7 +156,6 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.stamped_crown)
-                getString(R.string.incl) -> launchSeparate(R.string.non_separable)
                 getString(R.string.cla) -> launchSeparate(R.string.attach)
                 getString(R.string.plast) -> launchSeparate(R.string.whole)
             }

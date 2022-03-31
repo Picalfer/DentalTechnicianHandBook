@@ -111,6 +111,12 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.zir_crown_plus,
                 R.string.zir_crown_indication,
                 R.string.met_acrylic_crown_materials)
+            getString(R.string.tabs) -> setContent(
+                R.drawable.tab,
+                R.string.incl,
+                R.string.tab_plus,
+                R.string.tab_indication,
+                R.string.met_acrylic_crown_materials)
         }
     }
 
@@ -125,12 +131,14 @@ class SeparateActivity : AppCompatActivity() {
         else contentTextAdd.visibility = GONE
     }
 
-    private fun setContent(imContent: Int, logo: Int, plus: Int, indications: Int, materials: Int) {
-        b.faceContent.setImageResource(imContent)
-        b.contentLogoText.text = getString(logo)
-        b.plusMinus.text = getString(plus)
-        b.indications.text = getString(indications)
-        b.materials.text = getString(materials)
+    private fun setContent(imContent: Int, logo: Int, plus: Int, ind: Int, mat: Int) {
+        with(b) {
+            faceContent.setImageResource(imContent)
+            contentLogoText.text = getString(logo)
+            plusMinus.text = getString(plus)
+            indications.text = getString(ind)
+            materials.text = getString(mat)
+        }
         dataModel.steps.value = imContent
         supportFragmentManager.beginTransaction().replace(R.id.steps, InfoContent.newInstance()).commit()
     }
