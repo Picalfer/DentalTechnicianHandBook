@@ -117,6 +117,12 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.tab_plus,
                 R.string.tab_indication,
                 R.string.met_acrylic_crown_materials)
+            getString(R.string.e_max_man) -> setContent(
+                R.drawable.inl,
+                R.string.e_max_man,
+                R.string.e_max_plus,
+                R.string.e_max_indication,
+                R.string.met_acrylic_crown_materials)
         }
     }
 

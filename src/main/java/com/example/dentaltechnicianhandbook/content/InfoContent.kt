@@ -250,6 +250,15 @@ class InfoContent : Fragment() {
                     0,
                     string.tab_steps4,
                 )
+                inl -> setContent(
+                    string.e_max_steps1,
+                    string.e_max_steps2,
+                    string.e_max_steps3,
+                    e_max1,
+                    e_max2,
+                    e_max3,
+                    0
+                )
             }
         }
     }
