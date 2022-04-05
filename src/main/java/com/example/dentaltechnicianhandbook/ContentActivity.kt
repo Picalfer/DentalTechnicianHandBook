@@ -85,6 +85,12 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 }
                 hide(6)
             }
+            getString(R.string.e_max) -> {
+                with(b) {
+                    tvContent1.text = getString(R.string.e_max_man)
+                }
+                hide(6)
+            }
 
             /*b.tvContent1.text = getString(R.string.inlay)
                 b.tvContent2.text = getString(R.string.onlay)
@@ -101,7 +107,6 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 b.tvContent1.text =  getString(R.string.use_cad_cam)
                 hide(6)
             }*/
-            getString(R.string.incl_e_max),
             getString(R.string.cad_cam_title),
             getString(R.string.about_imp),
             getString(R.string.pr_imp),
@@ -148,7 +153,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.bridges) -> launchSeparate(R.string.acrylic_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.acrylic_crown)
                 getString(R.string.incl) -> launchSeparate(R.string.tabs)
-                getString(R.string.incl_e_max) -> launchSeparate(R.string.e_max)
+                getString(R.string.e_max) -> launchSeparate(R.string.e_max_man)
                 getString(R.string.cad_cam_title) -> launchSeparate(R.string.use_cad_cam)
                 getString(R.string.cla) -> launchSeparate(R.string.clam)
                 getString(R.string.plast) -> launchSeparate(R.string.part)
