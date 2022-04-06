@@ -123,6 +123,10 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.e_max_plus,
                 R.string.e_max_indication,
                 R.string.met_acrylic_crown_materials)
+            getString(R.string.whole) -> setContent(
+                R.drawable.rem_full1,
+
+            )
         }
     }
 

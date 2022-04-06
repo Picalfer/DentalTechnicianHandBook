@@ -91,23 +91,9 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 }
                 hide(6)
             }
+            /*getString(R.string.pr_imp) -> {
 
-            /*b.tvContent1.text = getString(R.string.inlay)
-                b.tvContent2.text = getString(R.string.onlay)
-                b.tvContent3.text = getString(R.string.overlay)
-                b.tvContent4.text = getString(R.string.pinlay)
-                */
-
-            /*getString(R.string.incl_e_max) -> { -или новый способ чтобы отдельный фрагмент запкскался при таких одиночных карточках либо
-            по тупому сделат чтобы был единичный выбор
-                b.tvContent1.text = getString(R.string.e_max)
-                hide(6)
-            }
-            getString(R.string.cad_cam_title) -> {
-                b.tvContent1.text =  getString(R.string.use_cad_cam)
-                hide(6)
             }*/
-            getString(R.string.cad_cam_title),
             getString(R.string.about_imp),
             getString(R.string.pr_imp),
             getString(R.string.about_cast_on_main),
@@ -125,9 +111,8 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 hide(4)
             }
             getString(R.string.plast) -> {
-                b.tvContent1.text = getString(R.string.part)
-                b.tvContent2.text = getString(R.string.whole)
-                hide(5)
+                b.tvContent1.text = getString(R.string.whole)
+                hide(6)
             }
         }
     }
@@ -156,13 +141,12 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.e_max) -> launchSeparate(R.string.e_max_man)
                 getString(R.string.cad_cam_title) -> launchSeparate(R.string.use_cad_cam)
                 getString(R.string.cla) -> launchSeparate(R.string.clam)
-                getString(R.string.plast) -> launchSeparate(R.string.part)
+                getString(R.string.plast) -> launchSeparate(R.string.whole)
             }
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.stamped_crown)
                 getString(R.string.cla) -> launchSeparate(R.string.attach)
-                getString(R.string.plast) -> launchSeparate(R.string.whole)
             }
             R.id.tvContent3 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.cast_bridge)
