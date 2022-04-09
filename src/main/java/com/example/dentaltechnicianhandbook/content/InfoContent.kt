@@ -259,6 +259,16 @@ class InfoContent : Fragment() {
                     e_max3,
                     0
                 )
+                rem_full1 -> setContent(
+                    string.rem_full_steps1,
+                    string.rem_full_steps2,
+                    string.rem_full_steps3,
+                    ottisk,
+                    rem_full4,
+                    rem_full2,
+                    rem_full3,
+                    string.rem_full_steps4
+                )
             }
         }
     }

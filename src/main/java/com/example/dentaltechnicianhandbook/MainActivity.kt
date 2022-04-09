@@ -78,16 +78,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.id_rem_full -> {
                 setContent(item.title,
                     R.drawable.header_button_rem,
-                    R.array.rem_prosthesis,
-                    R.array.rem_prosthesis_content,
-                    R.array.rem_prosthesis_image_array)
+                    R.array.rem_full_titles,
+                    R.array.rem_full_description_content,
+                    R.array.rem_full_image_array)
             }
             R.id.id_rem_part -> {
                 setContent(item.title,
                     R.drawable.header_button_rem,
-                    R.array.rem_prosthesis,
-                    R.array.rem_prosthesis_content,
-                    R.array.rem_prosthesis_image_array)
+                    R.array.rem_part_titles,
+                    R.array.rem_part_description_content,
+                    R.array.rem_part_image_array)
             }
             R.id.id_con -> {
                 val i = Intent(this, ContactsActivity::class.java)
