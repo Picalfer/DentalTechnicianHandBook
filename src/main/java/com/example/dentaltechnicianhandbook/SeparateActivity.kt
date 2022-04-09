@@ -125,8 +125,10 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.met_acrylic_crown_materials)
             getString(R.string.whole) -> setContent(
                 R.drawable.rem_full1,
-
-            )
+                R.string.whole,
+                R.string.rem_full_plus,
+                R.string.rem_full_indication,
+                R.string.met_acrylic_crown_materials)
         }
     }
 
