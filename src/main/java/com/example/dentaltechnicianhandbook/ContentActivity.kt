@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -26,23 +27,14 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
         }
 
-        /*with(b) { // узнать как отметить класс ContentActivity вместо слова this и с коратить тем самым код и не писать б
-            tvContent1.setOnClickListener()
-            tvContent2.setOnClickListener(this)
-        }*/
+        val contents = arrayOf(b.tvContent1, b.tvContent2, b.tvContent3, b.tvContent4,
+        b.tvContent5, b.tvContent6, b.tvContent7)
 
-        with(b) {
-            tvContent1.setOnClickListener(this@ContentActivity)
-            tvContent2.setOnClickListener(this@ContentActivity)
-            tvContent3.setOnClickListener(this@ContentActivity)
-            tvContent4.setOnClickListener(this@ContentActivity)
-            tvContent5.setOnClickListener(this@ContentActivity)
-            tvContent6.setOnClickListener(this@ContentActivity)
-            tvContent6.setOnClickListener(this@ContentActivity)
-            tvContent7.setOnClickListener(this@ContentActivity)
+        for (content in contents) {
+            content.setOnClickListener(this@ContentActivity)
         }
 
-            /* Главная */
+        /* Главная */
         when (intent.getStringExtra("title")) {
             getString(R.string.imp) -> setContentOn(R.id.information, R.string.imp)
             getString(R.string.cad_cam) -> setContentOn(R.id.information, R.string.cad_cam)
@@ -91,11 +83,15 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 }
                 hide(6)
             }
-            /*getString(R.string.pr_imp) -> {
-
-            }*/
+            getString(R.string.plast) -> {
+                b.tvContent1.text = getString(R.string.whole)
+                hide(6)
+            }
+            getString(R.string.pr_imp) -> {
+                b.tvContent1.text = getString(R.string.rem_on_imp)
+                hide(6)
+            }
             getString(R.string.about_imp),
-            getString(R.string.pr_imp),
             getString(R.string.about_cast_on_main),
             getString(R.string.quat),
             getString(R.string.neylon),
@@ -110,20 +106,8 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 }
                 hide(4)
             }
-            getString(R.string.plast) -> {
-                b.tvContent1.text = getString(R.string.whole)
-                hide(6)
-            }
         }
     }
-
-    /*private fun setItems(cont1: String, cont2: String) {  -- написать функцию которая сокращает дей-я заполнения итемов контентом
-    // использовать сокращение чтобы не писать миллион раз b. и тд ( with  и что-то там вроде.. )
-        b.tvContent1.text = cont1
-        b.tvContent2.text = cont2
-        var i = 1
-        for i in 7
-    }*/
 
     private fun setContentOn(id: Int, message: Int) {
         supportFragmentManager.beginTransaction().replace(id, InfoContent.newInstance()).commit()
@@ -142,6 +126,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.cad_cam_title) -> launchSeparate(R.string.use_cad_cam)
                 getString(R.string.cla) -> launchSeparate(R.string.clam)
                 getString(R.string.plast) -> launchSeparate(R.string.whole)
+                getString(R.string.pr_imp) -> launchSeparate(R.string.rem_on_imp)
             }
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)
