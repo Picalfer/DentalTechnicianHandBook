@@ -129,6 +129,13 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.rem_full_plus,
                 R.string.rem_full_indication,
                 R.string.met_acrylic_crown_materials)
+            getString(R.string.rem_on_imp) -> setContent(
+                R.drawable.rem_on_imp,
+                R.string.whole,
+                R.string.rem_full_plus,
+                R.string.rem_full_indication,
+                R.string.met_acrylic_crown_materials
+            )
         }
     }
 
