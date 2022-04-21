@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -89,7 +88,8 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             }
             getString(R.string.pr_imp) -> {
                 b.tvContent1.text = getString(R.string.rem_on_imp)
-                hide(6)
+                b.tvContent2.text = getString(R.string.rem_on_imp_stick)
+                hide(5)
             }
             getString(R.string.about_imp),
             getString(R.string.about_cast_on_main),
@@ -131,6 +131,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.stamped_crown)
+                getString(R.string.pr_imp) -> launchSeparate(R.string.rem_on_imp_stick)
                 getString(R.string.cla) -> launchSeparate(R.string.attach)
             }
             R.id.tvContent3 -> when (intent.getStringExtra("title")) {
