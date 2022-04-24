@@ -143,7 +143,27 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.rem_on_imp_indication,
                 R.string.met_acrylic_crown_materials
             )
-
+            getString(R.string.clam) -> setContent(
+                R.drawable.cla,
+                R.string.clam,
+                R.string.cla_general_plus,
+                R.string.clam_indications,
+                R.string.met_acrylic_crown_materials
+            )
+            getString(R.string.attach) -> setContent(
+                R.drawable.attach,
+                R.string.attach,
+                R.string.cla_general_plus,
+                R.string.attach_indications,
+                R.string.met_acrylic_crown_materials
+            )
+            getString(R.string.teles) -> setContent(
+                R.drawable.teles,
+                R.string.teles,
+                R.string.cla_general_plus,
+                R.string.teles_indications,
+                R.string.met_acrylic_crown_materials
+            )
         }
     }
 

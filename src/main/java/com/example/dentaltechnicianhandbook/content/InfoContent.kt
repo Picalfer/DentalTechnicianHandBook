@@ -288,6 +288,32 @@ class InfoContent : Fragment() {
                     rem_on_stick2,
                     rem_on_stick3
                 )
+                cla -> setContent(
+                    string.clam_steps1,
+                    string.clam_steps2,
+                    string.clam_steps3,
+                    material2,
+                    clam1,
+                    cast_main2,
+                    clam2,
+                    string.clam_steps4
+                )
+                attach -> setContent(
+                    string.attach_steps1,
+                    string.attach_steps2,
+                    string.attach_steps3,
+                    attach1,
+                    attach2,
+                    attach3
+                )
+                teles -> setContent(
+                    string.teles_steps1,
+                    string.teles_steps2,
+                    string.teles_steps3,
+                    teles1,
+                    teles2,
+                    teles3
+                )
             }
         }
     }
