@@ -27,10 +27,10 @@
                 android:id="@+id/id_con"
                 android:icon="@drawable/ic_con"
                 android:title="@string/con" />
-            <item
+            <!--<item
                 android:id="@+id/id_th"
                 android:icon="@drawable/ic_th"
-                android:title="@string/th" />
+                android:title="@string/th" />-->
         </menu>
     </item>
 

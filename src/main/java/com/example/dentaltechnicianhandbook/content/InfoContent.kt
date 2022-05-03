@@ -314,6 +314,22 @@ class InfoContent : Fragment() {
                     teles2,
                     teles3
                 )
+                qua -> setContent(
+                    string.quad_steps1,
+                    string.quad_steps2,
+                    string.quad_steps3,
+                    qua1,
+                    qua2,
+                    qua3
+                )
+                ic_part_rem -> setContent(
+                    string.part_rem_cla_steps1,
+                    string.part_rem_cla_steps2,
+                    string.part_rem_cla_steps3,
+                    rem_part4,
+                    rem_part2,
+                    rem_part3
+                )
             }
         }
     }
