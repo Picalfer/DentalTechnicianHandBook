@@ -91,13 +91,6 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 b.tvContent2.text = getString(R.string.rem_on_imp_stick)
                 hide(5)
             }
-            getString(R.string.about_imp),
-            getString(R.string.about_cast_on_main),
-            getString(R.string.quat),
-            getString(R.string.neylon),
-            getString(R.string.acry), -> {
-                hide(7)
-            }
             getString(R.string.cla) -> {
                 with(b) {
                     tvContent1.text = getString(R.string.clam)
@@ -105,6 +98,14 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                     tvContent3.text = getString(R.string.teles)
                 }
                 hide(4)
+            }
+            getString(R.string.quat) -> {
+                b.tvContent1.text = getString(R.string.quat)
+                hide(6)
+            }
+            getString(R.string.part_rem_cla) -> {
+                b.tvContent1.text = getString(R.string.part_rem_cla)
+                hide(6)
             }
         }
     }
@@ -127,6 +128,8 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
                 getString(R.string.cla) -> launchSeparate(R.string.clam)
                 getString(R.string.plast) -> launchSeparate(R.string.whole)
                 getString(R.string.pr_imp) -> launchSeparate(R.string.rem_on_imp)
+                getString(R.string.quat) -> launchSeparate(R.string.quat)
+                getString(R.string.part_rem_cla) -> launchSeparate(R.string.part_rem_cla)
             }
             R.id.tvContent2 -> when (intent.getStringExtra("title")) {
                 getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)

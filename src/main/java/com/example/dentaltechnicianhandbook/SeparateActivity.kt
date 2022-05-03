@@ -134,36 +134,43 @@ class SeparateActivity : AppCompatActivity() {
                 R.string.rem_on_imp,
                 R.string.rem_on_imp_plus,
                 R.string.rem_on_imp_indication,
-                R.string.met_acrylic_crown_materials
-            )
+                R.string.met_acrylic_crown_materials)
             getString(R.string.rem_on_imp_stick) -> setContent(
                 R.drawable.rem_on_stick,
                 R.string.rem_on_imp_stick,
                 R.string.rem_on_stick_plus,
                 R.string.rem_on_imp_indication,
-                R.string.met_acrylic_crown_materials
-            )
+                R.string.met_acrylic_crown_materials)
             getString(R.string.clam) -> setContent(
                 R.drawable.cla,
                 R.string.clam,
                 R.string.cla_general_plus,
                 R.string.clam_indications,
-                R.string.met_acrylic_crown_materials
-            )
+                R.string.met_acrylic_crown_materials)
             getString(R.string.attach) -> setContent(
                 R.drawable.attach,
                 R.string.attach,
                 R.string.cla_general_plus,
                 R.string.attach_indications,
-                R.string.met_acrylic_crown_materials
-            )
+                R.string.met_acrylic_crown_materials)
             getString(R.string.teles) -> setContent(
                 R.drawable.teles,
                 R.string.teles,
                 R.string.cla_general_plus,
                 R.string.teles_indications,
-                R.string.met_acrylic_crown_materials
-            )
+                R.string.met_acrylic_crown_materials)
+            getString(R.string.quat) -> setContent(
+                R.drawable.qua,
+                R.string.quat,
+                R.string.quad_plus,
+                R.string.quad_indications,
+                R.string.met_acrylic_crown_materials)
+            getString(R.string.part_rem_cla) -> setContent(
+                R.drawable.ic_part_rem,
+                R.string.part_rem_cla,
+                R.string.rem_part2,
+                R.string.part_rem_cla_indications,
+                R.string.met_acrylic_crown_materials)
         }
     }
 

@@ -15,4 +15,5 @@
     <dimen name="top_margin_tv_content">15dp</dimen>
     <dimen name="bot_margin_tv_content">5dp</dimen>
     <dimen name="margin_text">10dp</dimen>
+    <dimen name="contacts_screen_margin">15dp</dimen>
 </resources>
