@@ -6,50 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".ContactsActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/contacts_screen_margin"
-        android:background="@color/blue_white"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            style="@style/main_image_content_page"
-            android:layout_marginStart="10dp"
-            android:contentDescription="@string/app_name"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:src="@drawable/icon_main" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-100dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/contacts_screen_margin"
+            android:background="@color/blue_white"
             android:gravity="center_horizontal"
-            android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="@dimen/side_margin_tv_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="@color/purple_from_menu_title"
-            app:cardCornerRadius="10dp">
+            <ImageView
+                style="@style/main_image_content_page"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-50dp"
+                android:contentDescription="@string/app_name"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:src="@drawable/icon_main" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="@dimen/bigText"
-                android:text="@string/text_for_contacts"
-                android:textColor="@color/white"
-                android:textSize="@dimen/bigText" />
-        </androidx.cardview.widget.CardView>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:gravity="center_horizontal"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-    </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/side_margin_tv_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/purple_from_menu_title"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="@dimen/bigText"
+                    android:text="@string/text_for_contacts"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigText" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
