@@ -46,9 +46,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         headButton.setImageResource(R.drawable.header_button_home)
 
         val list = ArrayList<ListItem>()
-        list.addAll(fillArrays(resources.getStringArray(R.array.prosthesis),
-            resources.getStringArray(R.array.prosthesis_content),
-            getImageId(R.array.prosthesis_image_array)))
+        list.addAll(
+            fillArrays(
+                resources.getStringArray(R.array.prosthesis),
+                resources.getStringArray(R.array.prosthesis_content),
+                getImageId(R.array.prosthesis_image_array)
+            )
+        )
 
         rcView.hasFixedSize()
         rcView.layoutManager = LinearLayoutManager(this)
@@ -62,32 +66,40 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         rcView.smoothScrollToPosition(0)
         when (item.itemId) {
             R.id.id_fix -> {
-                setContent(item.title,
+                setContent(
+                    item.title,
                     R.drawable.header_button_fix,
                     R.array.fix_prosthesis,
                     R.array.fix_prosthesis_content,
-                    R.array.fix_prosthesis_image_array)
+                    R.array.fix_prosthesis_image_array
+                )
             }
             R.id.id_main -> {
-                setContent(item.title,
+                setContent(
+                    item.title,
                     R.drawable.header_button_home,
                     R.array.prosthesis,
                     R.array.prosthesis_content,
-                    R.array.prosthesis_image_array)
+                    R.array.prosthesis_image_array
+                )
             }
             R.id.id_rem_full -> {
-                setContent(item.title,
+                setContent(
+                    item.title,
                     R.drawable.header_button_rem,
                     R.array.rem_full_titles,
                     R.array.rem_full_description_content,
-                    R.array.rem_full_image_array)
+                    R.array.rem_full_image_array
+                )
             }
             R.id.id_rem_part -> {
-                setContent(item.title,
+                setContent(
+                    item.title,
                     R.drawable.header_button_rem,
                     R.array.rem_part_titles,
                     R.array.rem_part_description_content,
-                    R.array.rem_part_image_array)
+                    R.array.rem_part_image_array
+                )
             }
             R.id.id_con -> {
                 val i = Intent(this, ContactsActivity::class.java)
@@ -109,10 +121,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val headButton = findViewById<ImageView>(R.id.header_button)
         Toast.makeText(this, "$title", Toast.LENGTH_SHORT).show()
         headButton.setImageResource(headerButton)
-        adapter?.updateAdapter(fillArrays(
-            resources.getStringArray(prosthesis),
-            resources.getStringArray(prosthesisContent),
-            getImageId(prosthesisImageArray)))
+        adapter?.updateAdapter(
+            fillArrays(
+                resources.getStringArray(prosthesis),
+                resources.getStringArray(prosthesisContent),
+                getImageId(prosthesisImageArray)
+            )
+        )
     }
 
     private fun getImageId(imageArrayId: Int): IntArray {   // function for decode images id

@@ -3,8 +3,6 @@ package com.example.dentaltechnicianhandbook
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.text.method.Touch.scrollTo
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,13 +11,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter (listArray: ArrayList<ListItem>, context: Context):
+class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     private val listArrayR = listArray
     private var contextR = context
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
         private val tvContent = view.findViewById<TextView>(R.id.tv_content)
@@ -31,7 +29,7 @@ class MyAdapter (listArray: ArrayList<ListItem>, context: Context):
             tvContent.text = textCon
             tvImage.setImageResource(listItem.imageId)
             itemView.setOnClickListener {
-                Toast.makeText(context,"Выбрано: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Выбрано: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
                 val i = Intent(context, ContentActivity::class.java).apply {
                     putExtra("title", tvTitle.text.toString())
                     putExtra("content", listItem.contentText)
@@ -44,7 +42,7 @@ class MyAdapter (listArray: ArrayList<ListItem>, context: Context):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(contextR)
-        return ViewHolder(inflater.inflate(R.layout.item_layout,parent,false))
+        return ViewHolder(inflater.inflate(R.layout.item_layout, parent, false))
     }
 
     override fun getItemCount(): Int {
