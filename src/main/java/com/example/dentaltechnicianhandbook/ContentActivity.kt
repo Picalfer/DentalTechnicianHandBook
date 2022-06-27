@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dentaltechnicianhandbook.content.InfoContent
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
 
-class ContentActivity: AppCompatActivity(), View.OnClickListener {
+class ContentActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var b: ContentItemBinding
     private val dataModel: DataModel by viewModels()
@@ -26,8 +26,10 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
         }
 
-        val contents = arrayOf(b.tvContent1, b.tvContent2, b.tvContent3, b.tvContent4,
-        b.tvContent5, b.tvContent6, b.tvContent7)
+        val contents = arrayOf(
+            b.tvContent1, b.tvContent2, b.tvContent3, b.tvContent4,
+            b.tvContent5, b.tvContent6, b.tvContent7
+        )
 
         for (content in contents) {
             content.setOnClickListener(this@ContentActivity)
@@ -61,7 +63,8 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             }
             getString(R.string.bridges) -> {
                 with(b) {
-                    tvContent1.text = getString(R.string.acrylic_bridge) // можно сократить код с помощью команда with
+                    tvContent1.text =
+                        getString(R.string.acrylic_bridge) // можно сократить код с помощью команда with
                     tvContent2.text = getString(R.string.stamp_met_bridge)
                     tvContent3.text = getString(R.string.cast_bridge)
                     tvContent4.text = getString(R.string.met_acrylic_bridge)
@@ -156,7 +159,7 @@ class ContentActivity: AppCompatActivity(), View.OnClickListener {
             }
             R.id.tvContent7 -> when (intent.getStringExtra("title")) {
                 getString(R.string.crowns) -> launchSeparate(R.string.cast_crown)
-                getString(R.string.bridges) ->launchSeparate(R.string.zir_bridge)
+                getString(R.string.bridges) -> launchSeparate(R.string.zir_bridge)
             }
         }
     }

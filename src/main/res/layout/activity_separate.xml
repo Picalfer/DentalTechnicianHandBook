@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentAcrylicFragment"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:background="@color/item_content"
-    android:scrollbars="none"
     android:padding="7dp"
+    android:scrollbars="none"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@color/item_content_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/item_content_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/faceContent"
             style="@style/main_image_content_page"
+            android:contentDescription="@string/example"
             android:src="@drawable/acrylic_bridge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/example" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/contentLogoText"
@@ -85,10 +84,10 @@
 
                 <TextView
                     android:id="@+id/plusMinus"
+                    style="@style/separate_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    style="@style/separate_text" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -141,10 +140,10 @@
 
                 <TextView
                     android:id="@+id/indications"
+                    style="@style/separate_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    style="@style/separate_text" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
@@ -195,10 +194,10 @@
 
                 <TextView
                     android:id="@+id/materials"
+                    style="@style/separate_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    style="@style/separate_text" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
@@ -251,9 +250,9 @@
                     android:id="@+id/steps"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_margin="10dp"/>
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

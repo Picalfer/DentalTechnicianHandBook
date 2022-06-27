@@ -9,27 +9,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+        android:layout_margin="@dimen/contacts_screen_margin"
         android:background="@color/blue_white"
-        android:layout_margin="@dimen/contacts_screen_margin">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <ImageView
             style="@style/main_image_content_page"
-            android:src="@drawable/icon_main"
-            android:contentDescription="@string/app_name"
             android:layout_marginStart="10dp"
+            android:contentDescription="@string/app_name"
             android:scaleX="0.5"
-            android:scaleY="0.5"/>
+            android:scaleY="0.5"
+            android:src="@drawable/icon_main" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="16sp"
+            android:layout_marginTop="-100dp"
             android:gravity="center_horizontal"
+            android:text="@string/app_name"
             android:textColor="@color/black"
-            android:layout_marginTop="-100dp"/>
+            android:textSize="16sp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -37,19 +37,18 @@
             android:layout_marginHorizontal="@dimen/side_margin_tv_content"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="8dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/purple_from_menu_title">
+            app:cardBackgroundColor="@color/purple_from_menu_title"
+            app:cardCornerRadius="10dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="@dimen/bigText"
                 android:text="@string/text_for_contacts"
                 android:textColor="@color/white"
-                android:gravity="center"
-                android:textSize="@dimen/bigText"
-                android:padding="@dimen/bigText"/>
+                android:textSize="@dimen/bigText" />
         </androidx.cardview.widget.CardView>
-
 
     </LinearLayout>
 
