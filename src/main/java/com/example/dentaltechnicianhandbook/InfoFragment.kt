@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook.content
+package com.example.dentaltechnicianhandbook
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
-import com.example.dentaltechnicianhandbook.DataModel
+import com.example.dentaltechnicianhandbook.models.DataModel
 import com.example.dentaltechnicianhandbook.R.drawable.*
 import com.example.dentaltechnicianhandbook.R.string
 import com.example.dentaltechnicianhandbook.databinding.FragmentInfoContentBinding
 
-class InfoContent : Fragment() {
+class InfoFragment : Fragment() {
 
     private lateinit var b: FragmentInfoContentBinding
     private val dataModel: DataModel by activityViewModels()
@@ -335,7 +335,7 @@ class InfoContent : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = InfoContent()
+        fun newInstance() = InfoFragment()
     }
 
     private fun setContent(

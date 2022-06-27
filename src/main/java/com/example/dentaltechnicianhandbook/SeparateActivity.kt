@@ -7,8 +7,8 @@ import android.view.View.VISIBLE
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.dentaltechnicianhandbook.content.InfoContent
 import com.example.dentaltechnicianhandbook.databinding.ActivitySeparateBinding
+import com.example.dentaltechnicianhandbook.models.DataModel
 
 class SeparateActivity : AppCompatActivity() {
 
@@ -230,7 +230,7 @@ class SeparateActivity : AppCompatActivity() {
             materials.text = getString(mat)
         }
         dataModel.steps.value = imContent
-        supportFragmentManager.beginTransaction().replace(R.id.steps, InfoContent.newInstance())
+        supportFragmentManager.beginTransaction().replace(R.id.steps, InfoFragment.newInstance())
             .commit()
     }
 }

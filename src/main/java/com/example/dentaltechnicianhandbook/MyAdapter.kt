@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dentaltechnicianhandbook.models.ListItem
 
 class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {

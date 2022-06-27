@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook
+package com.example.dentaltechnicianhandbook.models
 
 data class ListItem(
     var imageId: Int,
