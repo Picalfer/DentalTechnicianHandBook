@@ -7,8 +7,8 @@ import android.view.View.GONE
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.dentaltechnicianhandbook.content.InfoContent
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
+import com.example.dentaltechnicianhandbook.models.DataModel
 
 class ContentActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -114,7 +114,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setContentOn(id: Int, message: Int) {
-        supportFragmentManager.beginTransaction().replace(id, InfoContent.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(id, InfoFragment.newInstance()).commit()
         dataModel.kind.value = getString(message)
         hide(7)
     }
