@@ -17,8 +17,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        b = ContentItemBinding.inflate(layoutInflater)
-        setContentView(b.root)
+        b = ContentItemBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         with(b) {
             tvTitleContent2.text = intent.getStringExtra("title")
@@ -35,7 +34,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
             content.setOnClickListener(this@ContentActivity)
         }
 
-        /* Главная */
+        // Главная
         when (intent.getStringExtra("title")) {
             getString(R.string.imp) -> setContentOn(R.id.information, R.string.imp)
             getString(R.string.cad_cam) -> setContentOn(R.id.information, R.string.cad_cam)
@@ -45,7 +44,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
             getString(R.string.fix) -> setContentOn(R.id.information, R.string.fix)
             getString(R.string.cast_main) -> setContentOn(R.id.information, R.string.cast_main)
             getString(R.string.material) -> setContentOn(R.id.information, R.string.material)
-            /* Несъёмные */
+            // Несъёмные
             getString(R.string.veneers_lumineers) -> {
                 b.tvContent1.text = getString(R.string.veneers_classic)
                 hide(6)
@@ -64,7 +63,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
             getString(R.string.bridges) -> {
                 with(b) {
                     tvContent1.text =
-                        getString(R.string.acrylic_bridge) // можно сократить код с помощью команда with
+                        getString(R.string.acrylic_bridge)
                     tvContent2.text = getString(R.string.stamp_met_bridge)
                     tvContent3.text = getString(R.string.cast_bridge)
                     tvContent4.text = getString(R.string.met_acrylic_bridge)

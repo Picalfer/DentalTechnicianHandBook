@@ -19,7 +19,7 @@
             android:layout_height="0dp"
             android:layout_margin="@dimen/contacts_screen_margin"
             android:background="@color/blue_white"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
