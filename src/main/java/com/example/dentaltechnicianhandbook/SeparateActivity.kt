@@ -17,8 +17,7 @@ class SeparateActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        b = ActivitySeparateBinding.inflate(layoutInflater)
-        setContentView(b.root)
+        b = ActivitySeparateBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         when (intent.getStringExtra("content")) {
             getString(R.string.veneers_classic) -> setContent(

@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun fillArrays(
         titleArray: Array<String>,
         contentArray: Array<String>,
-        imageArray: IntArray,
+        imageArray: IntArray
     ): List<ListItem> {
         val listItemArray = ArrayList<ListItem>()
         for (n in titleArray.indices) {

@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bot_margin_tv_content"
         android:background="@color/item_content"
         android:orientation="vertical"
-        android:layout_marginBottom="@dimen/bot_margin_tv_content">
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/im1"
-            style="@style/im_content" />
+            style="@style/im_content"
+            android:contentDescription="@string/prothesis_image" />
 
         <TextView
             android:id="@+id/tv1"
@@ -20,7 +23,8 @@
 
         <ImageView
             android:id="@+id/im2"
-            style="@style/im_content" />
+            style="@style/im_content"
+            android:contentDescription="@string/prothesis_image" />
 
         <TextView
             android:id="@+id/tv2"
@@ -28,7 +32,8 @@
 
         <ImageView
             android:id="@+id/im3"
-            style="@style/im_content" />
+            style="@style/im_content"
+            android:contentDescription="@string/prothesis_image" />
 
         <TextView
             android:id="@+id/tv3"
@@ -36,13 +41,14 @@
 
         <ImageView
             android:id="@+id/im4"
-            android:visibility="gone"
-            style="@style/im_content" />
+            style="@style/im_content"
+            android:contentDescription="@string/prothesis_image"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv4"
-            android:visibility="gone"
-            style="@style/tv_content" />
+            style="@style/tv_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 </FrameLayout>
