@@ -25,8 +25,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        b = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(b.root)
+        b = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         val navView = findViewById<NavigationView>(R.id.nav_view)
 
