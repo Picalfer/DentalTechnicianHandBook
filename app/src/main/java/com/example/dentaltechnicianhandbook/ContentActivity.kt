@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -34,20 +35,20 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
             content.setOnClickListener(this@ContentActivity)
         }
 
-        // Главная
+        // main
         when (intent.getStringExtra("title")) {
-            getString(R.string.imp) -> setContentOn(R.id.information, R.string.imp)
-            getString(R.string.cad_cam) -> setContentOn(R.id.information, R.string.cad_cam)
-            getString(R.string.cer_main) -> setContentOn(R.id.information, R.string.cer_main)
-            getString(R.string.rem_full) -> setContentOn(R.id.information, R.string.rem_full)
-            getString(R.string.rem_part) -> setContentOn(R.id.information, R.string.rem_part)
-            getString(R.string.fix) -> setContentOn(R.id.information, R.string.fix)
-            getString(R.string.cast_main) -> setContentOn(R.id.information, R.string.cast_main)
-            getString(R.string.material) -> setContentOn(R.id.information, R.string.material)
-            // Несъёмные
+            getString(R.string.imp) -> setContentOn(contents, R.id.information, R.string.imp)
+            getString(R.string.cad_cam) -> setContentOn(contents, R.id.information, R.string.cad_cam)
+            getString(R.string.cer_main) -> setContentOn(contents, R.id.information, R.string.cer_main)
+            getString(R.string.rem_full) -> setContentOn(contents, R.id.information, R.string.rem_full)
+            getString(R.string.rem_part) -> setContentOn(contents, R.id.information, R.string.rem_part)
+            getString(R.string.fix) -> setContentOn(contents, R.id.information, R.string.fix)
+            getString(R.string.cast_main) -> setContentOn(contents, R.id.information, R.string.cast_main)
+            getString(R.string.material) -> setContentOn(contents, R.id.information, R.string.material)
+            // fixed
             getString(R.string.veneers_lumineers) -> {
                 b.tvContent1.text = getString(R.string.veneers_classic)
-                hide(6)
+                hide(contents, 6)
             }
             getString(R.string.crowns) -> {
                 with(b) {
@@ -76,22 +77,22 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
                 with(b) {
                     tvContent1.text = getString(R.string.tabs)
                 }
-                hide(6)
+                hide(contents, 6)
             }
             getString(R.string.e_max) -> {
                 with(b) {
                     tvContent1.text = getString(R.string.e_max_man)
                 }
-                hide(6)
+                hide(contents, 6)
             }
             getString(R.string.plast) -> {
                 b.tvContent1.text = getString(R.string.whole)
-                hide(6)
+                hide(contents, 6)
             }
             getString(R.string.pr_imp) -> {
                 b.tvContent1.text = getString(R.string.rem_on_imp)
                 b.tvContent2.text = getString(R.string.rem_on_imp_stick)
-                hide(5)
+                hide(contents, 5)
             }
             getString(R.string.cla) -> {
                 with(b) {
@@ -99,23 +100,23 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
                     tvContent2.text = getString(R.string.attach)
                     tvContent3.text = getString(R.string.teles)
                 }
-                hide(4)
+                hide(contents, 4)
             }
             getString(R.string.quat) -> {
                 b.tvContent1.text = getString(R.string.quat)
-                hide(6)
+                hide(contents, 6)
             }
             getString(R.string.part_rem_cla) -> {
                 b.tvContent1.text = getString(R.string.part_rem_cla)
-                hide(6)
+                hide(contents, 6)
             }
         }
     }
 
-    private fun setContentOn(id: Int, message: Int) {
+    private fun setContentOn(contents: Array<TextView>, id: Int, message: Int) {
         supportFragmentManager.beginTransaction().replace(id, InfoFragment.newInstance()).commit()
         dataModel.kind.value = getString(message)
-        hide(7)
+        hide(contents, 7)
     }
 
     override fun onClick(v: View?) {
@@ -163,18 +164,9 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun hide(number: Int) = with(b) {
-        val content = arrayListOf(
-            tvContent1,
-            tvContent2,
-            tvContent3,
-            tvContent4,
-            tvContent5,
-            tvContent6,
-            tvContent7
-        )
-        val border = content.size - number
-        for (i in (content.size - 1) downTo border) content[i].visibility = GONE
+    private fun hide(contents: Array<TextView>, number: Int) = with(b) {
+        val border = contents.size - number
+        for (i in (contents.size - 1) downTo border) contents[i].visibility = GONE
     }
 
     private fun launchSeparate(message: Int) {

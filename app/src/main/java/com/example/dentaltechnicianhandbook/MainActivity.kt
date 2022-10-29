@@ -34,9 +34,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         navView.setBackgroundResource(R.drawable.item_gradient_animation)
         val frameAnimation = navView.background as AnimationDrawable
-        frameAnimation.setEnterFadeDuration(10)
-        frameAnimation.setExitFadeDuration(5000)
-        frameAnimation.start()
+        with(frameAnimation) {
+            setEnterFadeDuration(10)
+            setExitFadeDuration(5000)
+            start()
+        }
 
         navView.setNavigationItemSelectedListener(this)
 
@@ -67,7 +69,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.id_fix -> {
                 setContent(
-                    item.title,
+                    item.title.toString(),
                     R.drawable.header_button_fix,
                     R.array.fix_prosthesis,
                     R.array.fix_prosthesis_content,
@@ -76,7 +78,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.id_main -> {
                 setContent(
-                    item.title,
+                    item.title.toString(),
                     R.drawable.header_button_home,
                     R.array.prosthesis,
                     R.array.prosthesis_content,
@@ -85,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.id_rem_full -> {
                 setContent(
-                    item.title,
+                    item.title.toString(),
                     R.drawable.header_button_rem,
                     R.array.rem_full_titles,
                     R.array.rem_full_description_content,
@@ -94,7 +96,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.id_rem_part -> {
                 setContent(
-                    item.title,
+                    item.title.toString(),
                     R.drawable.header_button_rem,
                     R.array.rem_part_titles,
                     R.array.rem_part_description_content,

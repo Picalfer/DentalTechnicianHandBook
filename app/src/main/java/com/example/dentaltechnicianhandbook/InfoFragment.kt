@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
-import com.example.dentaltechnicianhandbook.models.DataModel
 import com.example.dentaltechnicianhandbook.R.drawable.*
 import com.example.dentaltechnicianhandbook.R.string
 import com.example.dentaltechnicianhandbook.databinding.FragmentInfoContentBinding
+import com.example.dentaltechnicianhandbook.models.DataModel
 
 class InfoFragment : Fragment() {
 

@@ -31,7 +31,7 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
             tvImage.setImageResource(listItem.imageId)
             itemView.setOnClickListener {
                 Toast.makeText(context, "Выбрано: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
-                val i = Intent(context, ContentActivity::class.java).apply {
+                val i = Intent(context, ContentActivity::class.java).apply { //todo
                     putExtra("title", tvTitle.text.toString())
                     putExtra("content", listItem.contentText)
                     putExtra("image", listItem.imageId)

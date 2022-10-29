@@ -1,7 +1,7 @@
 package com.example.dentaltechnicianhandbook
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class ContactsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
