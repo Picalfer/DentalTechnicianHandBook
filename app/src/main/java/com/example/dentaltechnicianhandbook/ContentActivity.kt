@@ -38,13 +38,25 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
         // main
         when (intent.getStringExtra("title")) {
             getString(R.string.imp) -> setContentOn(contents, R.id.information, R.string.imp)
-            getString(R.string.cad_cam) -> setContentOn(contents, R.id.information, R.string.cad_cam)
-            getString(R.string.cer_main) -> setContentOn(contents, R.id.information, R.string.cer_main)
-            getString(R.string.rem_full) -> setContentOn(contents, R.id.information, R.string.rem_full)
-            getString(R.string.rem_part) -> setContentOn(contents, R.id.information, R.string.rem_part)
+            getString(R.string.cad_cam) -> setContentOn(contents,
+                R.id.information,
+                R.string.cad_cam)
+            getString(R.string.cer_main) -> setContentOn(contents,
+                R.id.information,
+                R.string.cer_main)
+            getString(R.string.rem_full) -> setContentOn(contents,
+                R.id.information,
+                R.string.rem_full)
+            getString(R.string.rem_part) -> setContentOn(contents,
+                R.id.information,
+                R.string.rem_part)
             getString(R.string.fix) -> setContentOn(contents, R.id.information, R.string.fix)
-            getString(R.string.cast_main) -> setContentOn(contents, R.id.information, R.string.cast_main)
-            getString(R.string.material) -> setContentOn(contents, R.id.information, R.string.material)
+            getString(R.string.cast_main) -> setContentOn(contents,
+                R.id.information,
+                R.string.cast_main)
+            getString(R.string.material) -> setContentOn(contents,
+                R.id.information,
+                R.string.material)
             // fixed
             getString(R.string.veneers_lumineers) -> {
                 b.tvContent1.text = getString(R.string.veneers_classic)

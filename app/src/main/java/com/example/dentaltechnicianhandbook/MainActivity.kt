@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.array.fix_prosthesis_image_array
                 )
             }
+
             R.id.id_main -> {
                 setContent(
                     item.title.toString(),
@@ -85,6 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.array.prosthesis_image_array
                 )
             }
+
             R.id.id_rem_full -> {
                 setContent(
                     item.title.toString(),
@@ -94,6 +96,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.array.rem_full_image_array
                 )
             }
+
             R.id.id_rem_part -> {
                 setContent(
                     item.title.toString(),
@@ -103,6 +106,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.array.rem_part_image_array
                 )
             }
+
             R.id.id_con -> {
                 val i = Intent(this, ContactsActivity::class.java)
                 startActivity(i)
@@ -118,7 +122,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         headerButton: Int,
         prosthesis: Int,
         prosthesisContent: Int,
-        prosthesisImageArray: Int
+        prosthesisImageArray: Int,
     ) {
         val headButton = findViewById<ImageView>(R.id.header_button)
         Toast.makeText(this, "$title", Toast.LENGTH_SHORT).show()
@@ -146,7 +150,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun fillArrays(
         titleArray: Array<String>,
         contentArray: Array<String>,
-        imageArray: IntArray
+        imageArray: IntArray,
     ): List<ListItem> {
         val listItemArray = ArrayList<ListItem>()
         for (n in titleArray.indices) {
