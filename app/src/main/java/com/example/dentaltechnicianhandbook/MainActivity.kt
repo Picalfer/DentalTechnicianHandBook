@@ -27,20 +27,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
-        val navView = findViewById<NavigationView>(R.id.nav_view)
-
-        val header: View = navView.getHeaderView(0)
+        val header: View = b.navView.getHeaderView(0)
         header.setBackgroundColor(Color.parseColor("#6F279C"))
 
-        navView.setBackgroundResource(R.drawable.item_gradient_animation)
-        val frameAnimation = navView.background as AnimationDrawable
+        b.navView.setBackgroundResource(R.drawable.item_gradient_animation)
+        val frameAnimation = b.navView.background as AnimationDrawable
         with(frameAnimation) {
             setEnterFadeDuration(10)
             setExitFadeDuration(5000)
             start()
         }
 
-        navView.setNavigationItemSelectedListener(this)
+        b.navView.setNavigationItemSelectedListener(this)
 
         val rcView = findViewById<RecyclerView>(R.id.rcView)
 

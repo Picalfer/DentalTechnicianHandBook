@@ -46,9 +46,7 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
         return ViewHolder(inflater.inflate(R.layout.item_layout, parent, false))
     }
 
-    override fun getItemCount(): Int {
-        return listArrayR.size
-    }
+    override fun getItemCount(): Int = listArrayR.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val listItem = listArrayR[position]
