@@ -47,5 +47,5 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
 
     // yandex ad
-    implementation 'com.yandex.android:mobileads:5.9.0'
+    implementation 'com.yandex.android:mobileads:5.10.0'
 }
