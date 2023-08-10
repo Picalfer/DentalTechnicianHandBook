@@ -1,6 +1,5 @@
 package com.example.dentaltechnicianhandbook
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dentaltechnicianhandbook.models.ListItem
+import com.example.dentaltechnicianhandbook.model.ListItem
 
 class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
@@ -31,10 +30,10 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
             tvImage.setImageResource(listItem.imageId)
             itemView.setOnClickListener {
                 Toast.makeText(context, "Выбрано: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
-                val i = Intent(context, ContentActivity::class.java).apply { //todo
-                    putExtra("title", tvTitle.text.toString())
-                    putExtra("content", listItem.contentText)
-                    putExtra("image", listItem.imageId)
+                val i = Intent(context, ContentActivity::class.java).apply {
+                    putExtra(Constants.TITLE, tvTitle.text.toString())
+                    putExtra(Constants.CONTENT, listItem.contentText)
+                    putExtra(Constants.IMAGE, listItem.imageId)
                 }
                 context.startActivity(i)
             }
@@ -53,7 +52,6 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
         holder.bind(listItem, contextR)
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     fun updateAdapter(listArray: List<ListItem>) {
         listArrayR.clear()
         listArrayR.addAll(listArray)

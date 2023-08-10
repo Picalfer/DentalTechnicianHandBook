@@ -11,7 +11,6 @@ import androidx.lifecycle.LifecycleOwner
 import com.example.dentaltechnicianhandbook.R.drawable.*
 import com.example.dentaltechnicianhandbook.R.string
 import com.example.dentaltechnicianhandbook.databinding.FragmentInfoContentBinding
-import com.example.dentaltechnicianhandbook.models.DataModel
 
 class InfoFragment : Fragment() {
 

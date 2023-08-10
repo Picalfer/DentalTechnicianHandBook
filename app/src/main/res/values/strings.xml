@@ -2,7 +2,7 @@
     <string name="app_name">Dental Technician HandBook</string>
 
     <!-- Menu elements -->
-    <string name="main_menu"><b>Главная</b></string>
+    <string name="main_menu">Главная</string>
     <string name="rem_full_menu">Полные съёмные</string>
     <string name="rem_part_menu">Частичные съёмные</string>
     <string name="fix_menu">Несъёмные</string>
@@ -17,6 +17,8 @@
     <string name="fix">О несъёмных протезах</string>
     <string name="cast_main">О литье</string>
     <string name="material">Материалы и оборудование</string>
+
+    <string name="prothesis_image">Prothesis</string>
 
     <string name="imp_mini">Зубной имплантат — искусственно изготовленная, чаще всего многокомпонентная конструкция, используемая для внедрения в костную ткань челюсти с последующим сращением с целью протезирования.</string>
     <string name="cad_cam_mini">Система зубного протезирования CAD/CAM — способ изготовления ортопедических конструкций с применением передовых компьютерных технологий. Современная методика призвана автоматизировать процесс создания протеза: заготовка моделируется в электронной программе, а в дальнейшем фрезеруется на станке с ЧПУ.</string>
@@ -1304,6 +1306,7 @@
         \n11 этап (лабораторный) - полимеризация пластмассы, выемка протеза из кюветы, его отделка, шлифовка и полировка;
         \n12 этап (клинический) - наложение протеза на челюсть (сдача протеза).
     </string>
-    <string name="text_for_contacts">Если у вас появилась идея, как дополнить материал, улучшить его, либо необходимо убрать неактуальные данные - отправьте пожалуйста письмо на почту \n <i> trable228@icloud.com </i></string>
-    <string name="prothesis_image">Prothesis</string>
+
+    <!-- contacts activity -->
+    <string name="text_for_contacts">Если у вас появилась идея как дополнить материал, улучшить его, либо необходимо убрать неактуальные данные - отправьте пожалуйста письмо на почту \n <i> trable228@icloud.com </i></string>
 </resources>

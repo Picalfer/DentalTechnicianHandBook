@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
-import com.example.dentaltechnicianhandbook.models.DataModel
 
 class ContentActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -21,9 +20,9 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
         b = ContentItemBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         with(b) {
-            tvTitleContent2.text = intent.getStringExtra("title")
-            tvContent.text = intent.getStringExtra("content")
-            imageContent2.setImageResource(intent.getIntExtra("image", R.drawable.rem))
+            tvTitleContent2.text = intent.getStringExtra(Constants.TITLE)
+            tvContent.text = intent.getStringExtra(Constants.CONTENT)
+            imageContent2.setImageResource(intent.getIntExtra(Constants.IMAGE, R.drawable.rem))
         }
 
         val contents = arrayOf(
@@ -36,7 +35,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         // main
-        when (intent.getStringExtra("title")) {
+        when (intent.getStringExtra(Constants.TITLE)) {
             getString(R.string.imp) -> setContentOn(contents, R.id.information, R.string.imp)
             getString(R.string.cad_cam) -> setContentOn(contents,
                 R.id.information,
@@ -133,7 +132,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.tvContent1 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent1 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.veneers_lumineers) -> launchSeparate(R.string.veneers_classic)
                 getString(R.string.bridges) -> launchSeparate(R.string.acrylic_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.acrylic_crown)
@@ -146,30 +145,30 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
                 getString(R.string.quat) -> launchSeparate(R.string.quat)
                 getString(R.string.part_rem_cla) -> launchSeparate(R.string.part_rem_cla)
             }
-            R.id.tvContent2 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent2 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.bridges) -> launchSeparate(R.string.stamp_met_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.stamped_crown)
                 getString(R.string.pr_imp) -> launchSeparate(R.string.rem_on_imp_stick)
                 getString(R.string.cla) -> launchSeparate(R.string.attach)
             }
-            R.id.tvContent3 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent3 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.bridges) -> launchSeparate(R.string.cast_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.met_cer_crown)
                 getString(R.string.cla) -> launchSeparate(R.string.teles)
             }
-            R.id.tvContent4 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent4 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.bridges) -> launchSeparate(R.string.met_acrylic_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.zir_crown)
             }
-            R.id.tvContent5 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent5 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.bridges) -> launchSeparate(R.string.cer_bridge)
                 getString(R.string.crowns) -> launchSeparate(R.string.cer_crown)
             }
-            R.id.tvContent6 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent6 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.crowns) -> launchSeparate(R.string.met_acrylic_crown)
                 getString(R.string.bridges) -> launchSeparate(R.string.met_cer_bridge)
             }
-            R.id.tvContent7 -> when (intent.getStringExtra("title")) {
+            R.id.tvContent7 -> when (intent.getStringExtra(Constants.TITLE)) {
                 getString(R.string.crowns) -> launchSeparate(R.string.cast_crown)
                 getString(R.string.bridges) -> launchSeparate(R.string.zir_bridge)
             }
@@ -184,7 +183,7 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
     private fun launchSeparate(message: Int) {
         val i = Intent(this, SeparateActivity::class.java)
         Toast.makeText(this, getString(message), Toast.LENGTH_SHORT).show()
-        i.putExtra("content", getString(message))
+        i.putExtra(Constants.CONTENT, getString(message))
         startActivity(i)
     }
 }

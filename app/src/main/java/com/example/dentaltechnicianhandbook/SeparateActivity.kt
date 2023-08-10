@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.dentaltechnicianhandbook.databinding.ActivitySeparateBinding
-import com.example.dentaltechnicianhandbook.models.DataModel
 
 class SeparateActivity : AppCompatActivity() {
 
@@ -19,7 +18,7 @@ class SeparateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = ActivitySeparateBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
-        when (intent.getStringExtra("content")) {
+        when (intent.getStringExtra(Constants.CONTENT)) {
             getString(R.string.veneers_classic) -> setContent(
                 R.drawable.ven,
                 R.string.veneers_classic,

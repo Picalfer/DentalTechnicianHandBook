@@ -16,8 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dentaltechnicianhandbook.databinding.ActivityMainBinding
-import com.example.dentaltechnicianhandbook.databinding.MainContentBinding
-import com.example.dentaltechnicianhandbook.models.ListItem
+import com.example.dentaltechnicianhandbook.model.ListItem
 import com.google.android.material.navigation.NavigationView
 import com.yandex.mobile.ads.banner.AdSize
 import com.yandex.mobile.ads.banner.BannerAdEventListener
@@ -78,30 +77,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val adRequest = AdRequest.Builder().build()
         banner.loadAd(adRequest)
         banner.setBannerAdEventListener(object : BannerAdEventListener {
-
-            override fun onAdLoaded() {
-            }
-
+            override fun onAdLoaded() {}
             override fun onAdFailedToLoad(error: AdRequestError) {
                 Log.d("TEST", "Yandex Ad Error: ${error.description}")
             }
-
-            override fun onAdClicked() {
-
-            }
-
-            override fun onLeftApplication() {
-
-            }
-
-            override fun onReturnedToApplication() {
-
-            }
-
-            override fun onImpression(p0: ImpressionData?) {
-
-            }
-
+            override fun onAdClicked() {}
+            override fun onLeftApplication() {}
+            override fun onReturnedToApplication() {}
+            override fun onImpression(p0: ImpressionData?) {}
         })
     }
 
