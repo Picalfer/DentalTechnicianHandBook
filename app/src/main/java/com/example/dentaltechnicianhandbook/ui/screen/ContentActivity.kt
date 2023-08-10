@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook
+package com.example.dentaltechnicianhandbook.ui.screen
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dentaltechnicianhandbook.Constants
+import com.example.dentaltechnicianhandbook.data.DataModel
+import com.example.dentaltechnicianhandbook.R
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
 
 class ContentActivity : AppCompatActivity(), View.OnClickListener {
@@ -39,23 +42,29 @@ class ContentActivity : AppCompatActivity(), View.OnClickListener {
             getString(R.string.imp) -> setContentOn(contents, R.id.information, R.string.imp)
             getString(R.string.cad_cam) -> setContentOn(contents,
                 R.id.information,
-                R.string.cad_cam)
+                R.string.cad_cam
+            )
             getString(R.string.cer_main) -> setContentOn(contents,
                 R.id.information,
-                R.string.cer_main)
+                R.string.cer_main
+            )
             getString(R.string.rem_full) -> setContentOn(contents,
                 R.id.information,
-                R.string.rem_full)
+                R.string.rem_full
+            )
             getString(R.string.rem_part) -> setContentOn(contents,
                 R.id.information,
-                R.string.rem_part)
+                R.string.rem_part
+            )
             getString(R.string.fix) -> setContentOn(contents, R.id.information, R.string.fix)
             getString(R.string.cast_main) -> setContentOn(contents,
                 R.id.information,
-                R.string.cast_main)
+                R.string.cast_main
+            )
             getString(R.string.material) -> setContentOn(contents,
                 R.id.information,
-                R.string.material)
+                R.string.material
+            )
             // fixed
             getString(R.string.veneers_lumineers) -> {
                 b.tvContent1.text = getString(R.string.veneers_classic)

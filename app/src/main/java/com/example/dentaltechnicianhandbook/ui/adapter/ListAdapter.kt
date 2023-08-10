@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook
+package com.example.dentaltechnicianhandbook.ui.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,10 +9,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dentaltechnicianhandbook.model.ListItem
+import com.example.dentaltechnicianhandbook.Constants
+import com.example.dentaltechnicianhandbook.R
+import com.example.dentaltechnicianhandbook.data.model.ListItem
+import com.example.dentaltechnicianhandbook.ui.screen.ContentActivity
 
-class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
-    RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class ListAdapter(listArray: ArrayList<ListItem>, context: Context) :
+    RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     private val listArrayR = listArray
     private var contextR = context

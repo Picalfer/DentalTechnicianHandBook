@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook
+package com.example.dentaltechnicianhandbook.ui.screen
 
 import android.content.Intent
 import android.content.res.TypedArray
@@ -15,8 +15,10 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dentaltechnicianhandbook.ui.adapter.ListAdapter
+import com.example.dentaltechnicianhandbook.R
 import com.example.dentaltechnicianhandbook.databinding.ActivityMainBinding
-import com.example.dentaltechnicianhandbook.model.ListItem
+import com.example.dentaltechnicianhandbook.data.model.ListItem
 import com.google.android.material.navigation.NavigationView
 import com.yandex.mobile.ads.banner.AdSize
 import com.yandex.mobile.ads.banner.BannerAdEventListener
@@ -28,7 +30,7 @@ import com.yandex.mobile.ads.common.ImpressionData
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var b: ActivityMainBinding
-    private var adapter: MyAdapter? = null
+    private var adapter: ListAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +68,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         rcView.hasFixedSize()
         rcView.layoutManager = LinearLayoutManager(this)
 
-        adapter = MyAdapter(list, this)
+        adapter = ListAdapter(list, this)
         rcView.adapter = adapter
     }
 
