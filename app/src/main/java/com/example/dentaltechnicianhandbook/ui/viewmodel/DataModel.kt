@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook.data
+package com.example.dentaltechnicianhandbook.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

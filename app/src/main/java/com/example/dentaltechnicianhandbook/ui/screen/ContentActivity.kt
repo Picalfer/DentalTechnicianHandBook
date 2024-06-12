@@ -8,8 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.dentaltechnicianhandbook.Constants
-import com.example.dentaltechnicianhandbook.data.DataModel
+import com.example.dentaltechnicianhandbook.utils.Constants
+import com.example.dentaltechnicianhandbook.ui.viewmodel.DataModel
 import com.example.dentaltechnicianhandbook.R
 import com.example.dentaltechnicianhandbook.databinding.ContentItemBinding
 

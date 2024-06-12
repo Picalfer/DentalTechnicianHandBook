@@ -1,4 +1,4 @@
-package com.example.dentaltechnicianhandbook
+package com.example.dentaltechnicianhandbook.utils
 
 object Constants {
     const val CONTENT = "CONTENT"

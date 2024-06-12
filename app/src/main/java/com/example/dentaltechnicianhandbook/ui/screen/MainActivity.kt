@@ -15,7 +15,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dentaltechnicianhandbook.ui.adapter.ListAdapter
+import com.example.dentaltechnicianhandbook.ui.screen.adapter.ListAdapter
 import com.example.dentaltechnicianhandbook.R
 import com.example.dentaltechnicianhandbook.databinding.ActivityMainBinding
 import com.example.dentaltechnicianhandbook.data.model.ListItem

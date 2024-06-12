@@ -7,9 +7,9 @@ import android.view.View.VISIBLE
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.dentaltechnicianhandbook.Constants
+import com.example.dentaltechnicianhandbook.utils.Constants
 import com.example.dentaltechnicianhandbook.R
-import com.example.dentaltechnicianhandbook.data.DataModel
+import com.example.dentaltechnicianhandbook.ui.viewmodel.DataModel
 import com.example.dentaltechnicianhandbook.databinding.ActivitySeparateBinding
 
 class SeparateActivity : AppCompatActivity() {

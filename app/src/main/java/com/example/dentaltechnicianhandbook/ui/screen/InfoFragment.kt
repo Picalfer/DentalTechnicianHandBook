@@ -10,7 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.example.dentaltechnicianhandbook.R.drawable.*
 import com.example.dentaltechnicianhandbook.R.string
-import com.example.dentaltechnicianhandbook.data.DataModel
+import com.example.dentaltechnicianhandbook.ui.viewmodel.DataModel
 import com.example.dentaltechnicianhandbook.databinding.FragmentInfoContentBinding
 
 class InfoFragment : Fragment() {
