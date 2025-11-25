@@ -1,22 +1,69 @@
-# DentalTechnicianHandBook
-## Hand book for dental technicians for manufactoring prosthesises.
+# DentalTechnicianHandbook
 
-## Перед вами приложение "Справочник зубного техника". 
-Я сделал это приложение когда учился на зубного техника, оно создано на тех знаниях которые имелись на тот момент, поэтому вы не увидите интересных решений в коде.
-Этот проект сделан не для отработки какой-либо технологии, он создан для того чтобы принести пользу зубным техникам новичкам, которые еще учатся или только окончили учебное заведение.
-В этом приложении вы можете узнать как создаются разные виды протезов, обновить в голове алгоритм лабораторных или клинических этапов для изготовления того или иного протеза. 
-Вы можете посмотреть как изготавливается конкретная разновидность какого-либо протеза.
-В приложении протезы поделены по стандартной классификации: съемные, несъемные, частично-съемные, также есть вкладка с общей информацией - материалы, оборудование, технология CAD-CAM и тд.
-Выбрав разновидно протеза вы можете выбрать из какого материала изготавливается необходимый протез и почитать этапы изготовления конкретно вашего изделия.
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.8+-blue.svg?logo=kotlin)](https://kotlinlang.org)
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://www.android.com/)
 
-### Из используемых технологий:
-1. Fragments
-2. RecyclerView
-3. Дизайн разработан в Figma
+Профессиональное справочное приложение для зубных техников с полной информацией о изготовлении зубных протезов.
 
-<img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_menu.webp"  width="350" alt="Landing screen"/> <img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_main.webp"  width="350" alt="Game screen"/>
-<img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_removable.webp"  width="350" alt="Landing screen"/> <img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_fixed.webp"  width="350" alt="Game screen"/>
-<img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_part_rem.webp"  width="350" alt="Game screen"/>
-<img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_types.webp"  width="350" alt="Landing screen"/> <img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_info_close.webp"  width="350" alt="Game screen"/>
-<img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_info_open.webp"  width="350" alt="Landing screen"/> <img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_info_open_steps.webp"  width="350" alt="Game screen"/>
-<img  src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_contacts.webp"  width="350" alt="Game screen"/>
+## О проекте
+
+Приложение создано как цифровой справочник для зубных техников, содержащий подробные алгоритмы изготовления различных видов зубных протезов. Предназначено для студентов и начинающих специалистов в области зубного протезирования.
+
+**Основной функционал:**
+- 📚 Полная классификация протезов: съемные, несъемные, частично-съемные
+- 🔍 Подробные этапы изготовления каждого типа протезов
+- 🎯 Информация о материалах и оборудовании
+- 📱 Интуитивная навигация с Drawer Layout
+- 🖼️ Визуальные материалы и схемы процессов
+- 📞 Раздел контактов и дополнительной информации
+
+## 🦷 Классификация протезов
+
+**Несъемные протезы:**
+- Виниры и люминиры
+- Коронки (акриловые, металлокерамические, циркониевые)
+- Мостовидные протезы
+- Вкладки и накладки
+
+**Съемные протезы:**
+- Полные съемные протезы
+- Протезы на имплантах
+- Бюгельные протезы
+
+**Частично-съемные протезы:**
+- Кламмерные системы
+- Аттачмены
+- Телескопические системы
+- Квадротти
+
+## 🛠 Технологии
+
+* Kotlin
+* Fragment Navigation
+* RecyclerView
+* ViewModel & LiveData
+* Drawer Layout
+* Yandex Advertising
+* Custom Animations
+
+## 🎨 Дизайн
+
+Дизайн приложения разработан в Figma с учетом удобства использования и профессиональной тематики. Включает анимированные градиенты и интуитивную навигацию.
+
+## 📸 Скриншоты
+
+<div align="center">
+  <img src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_menu.webp" width="280" alt="Главное меню"/>
+  <img src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_main.webp" width="280" alt="Основной экран"/>
+  <img src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_removable.webp" width="280" alt="Съемные протезы"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_fixed.webp" width="280" alt="Несъемные протезы"/>
+  <img src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_part_rem.webp" width="280" alt="Частично-съемные"/>
+  <img src="https://github.com/Picalfer/DentalTechnicianHandBook/blob/main/app/src/main/res/drawable/screen_types.webp" width="280" alt="Типы протезов"/>
+</div>
+
+## 🎯 Цель проекта
+
+Проект создан для оказания практической помощи зубным техникам в процессе обучения и работы, предоставляя быстрый доступ к алгоритмам изготовления и технической информации.
